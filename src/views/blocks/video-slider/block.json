@@ -1,0 +1,24 @@
+{
+    "name": "acf/video-slider",
+    "title": "Video Slider",
+    "description": "Theme styled Video Slider block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["video-slider", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "video-slider.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "video-slider/preview.jpg"
+            }
+        }
+    }
+}

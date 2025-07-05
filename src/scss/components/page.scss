@@ -1,0 +1,437 @@
+.woocommerce-breadcrumb{
+    display: none;
+}
+
+.woocommerce-products-header__title.page-title{
+    display: none;
+}
+
+.nasal-spray-page , .mouth-spray-page , .safer-air-page{
+    .benefit-listing{
+        &__inner{
+            align-items: center;
+        }
+
+        &__icon{
+            width: 116px;
+        }
+
+        &__column{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.safer-air-page ,.mouth-spray-page ,.nasal-spray-page{
+    .featured-product-horizontal{
+        &__product{
+           align-items: center;
+
+           &-cta{
+            a.button{
+                min-width: 221px;
+            }
+           }
+        }
+    }
+}
+
+.metabolism-page{
+    .video-gallery-modal{
+        padding: 0 0 40px;
+        border: 0;
+    }
+}
+
+.neuropro-memory-page{
+    .image-banner--v2{
+    
+        
+        @media screen and (max-width: 768px){
+            padding: 0 20px;
+
+            .image-banner{
+                &__container{
+                    padding: 20px 0;
+                    align-items: flex-start;
+                    width: 100%;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                }
+    
+                &__content{
+                    max-width: 132px;
+                    h2{
+                        font-size: 18px;
+                        line-height: 25px;
+                        font-weight: bold;
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .featured-product-intro{
+        @media screen and (max-width: 768px){
+            &__product-wrapper{
+                flex-direction: row-reverse;
+            }
+
+            &__product{
+                margin-top: -90px !important
+            }
+        }
+    }
+
+}
+
+
+.nasal-spray-page , .brain-fog-support-page{
+    .featured-product-horizontal {
+        &__product{
+            justify-content: center;
+        }
+    }
+}
+
+.neuropro-memory-page{
+    .supplement-facts__image{
+        svg{
+            max-width: 235px;
+        }
+    }
+}
+
+.neuroproplus-page{
+    .benefit-listing__icon{
+        svg{
+            path{
+                fill : #4275AE;
+            }
+        }
+    }
+}
+
+.error404 {
+    header{
+        display: none;
+    }
+
+    .announcement{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .page-blocks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding-left: 84px;
+        h6{
+            font-size: 23px;
+            line-height: normal;
+            color : #000;
+            font-weight: 500;
+        }
+
+        h1{
+            font-size: 344px;
+            line-height: normal;
+            color : #000;
+        }
+
+        p{
+            font-size: 34px;
+            line-height: normal;
+            color : #000;
+            margin-bottom: 35px;
+        }
+
+        .wp-block-button{
+            margin: 23.66px 0 14.2px;
+
+            a.wp-element-button{
+                background-color: #000 !important;
+                color: #fff !important;
+                font-size: 25px !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 15px 47px !important;
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    @media screen and (max-width : 768px){
+        .page-blocks{
+            padding-left: 20px;
+            padding-right: 20px;
+            align-items: center;
+            text-align: center;
+            h1{
+                font-size: 200px;
+            }
+        }
+    }
+
+    @media screen and (max-width : 480px){
+        .page-blocks{
+            h1{
+                font-size: 150px;
+            }
+
+            p{
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.my-account-page{
+    .woocommerce{
+        max-width: 950px;
+        width: 100%;
+        padding: 45px 20px;
+        margin: 0 auto;
+        display: flex;
+
+        form .form-row .input-text, .woocommerce form .form-row select{
+            border-radius: 0;
+            height: 40px;
+        }
+
+        .woocommerce-form-row{
+            margin-bottom: 24px;
+
+            label{
+                font-size: 14px;
+                line-height: 20px;
+                color: #221f20;
+                margin-bottom: 14px;
+            }
+        }
+
+        .woocommerce-MyAccount-navigation{
+            float: none;
+            width: 248px;
+
+            ul{
+                list-style: none;
+                padding: 30px 30px 0;
+                border: 1px solid #221f20;
+
+                li{
+                    height: 40px;
+                    
+                    a{
+                        font-size: 14px;
+                        color: #221f20;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-MyAccount-content{
+            float: none;
+            flex: 1;
+            width: auto;
+            padding-left: 60px;
+
+            p{
+                font-family: 14px;
+                line-height: 20px;
+                color: #221f20;
+            }
+        }
+
+        .woocommerce-Addresses{
+            display: flex;
+            flex-direction: column;
+
+            .col-1{
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        .woocommerce-Button{
+            font-size: 14px;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            padding: 1 16px;
+            background-color: #000;
+            color: #fff;
+        }
+
+
+    }
+}
+
+.cart-page{
+    .wp-block-woocommerce-cart{
+        padding: 114px 0 83px;
+    }
+
+    .wc-block-components-sidebar-layout{
+        max-width: 1020px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .wc-block-components-product-metadata__description{
+        p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    .wc-block-components-main{
+        padding-right: 0 !important;
+    }
+
+    .wp-block-woocommerce-cart-order-summary-heading-block{
+        font-size: 14px !important;
+    }
+
+    .wc-block-cart-items__header{
+        font-size: 14px !important;
+    }
+
+
+    .wc-block-components-totals-item__description{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .wp-block-button{
+        a.wp-block-button__link{
+            text-decoration: none;
+            background-color: #46abd3 !important;
+            color: #fff !important;
+            font-size: 14px;
+        }
+    }
+
+    .wc-block-cart__empty-cart__title.with-empty-cart-icon:before{
+        display: none !important;
+    }
+
+    .wp-block-product-new{
+        padding-top: 40px;
+    }
+
+    hr.is-style-dots{
+        &::before{
+            display: none !important;
+        }
+    }
+
+    .wc-block-grid__product-price.price{
+        display: flex;
+        flex-direction: column;
+
+        span{
+            font-size: 16px !important;
+        }
+
+        small{
+            font-size: 16px !important;
+        }
+
+        .woocommerce-Price-amount.amount{
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+    }
+}
+
+.checkout-page {
+   
+    .wp-block-woocommerce-checkout{
+        padding: 114px 0 83px;
+    }
+    .wc-block-components-main{
+        padding-right: 0 !important;
+    }
+
+    .wp-block-woocommerce-cart-order-summary-heading-block{
+        font-size: 14px !important;
+    }
+
+    .wc-block-cart-items__header{
+        font-size: 14px !important;
+    }
+
+    .wc-block-components-sidebar-layout{
+        max-width: 1020px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+.my-account-page{
+    padding: 40px 0;
+
+    .woocommerce{
+        h2{
+            text-align: center;
+            font-size: 32px;
+            display: none;
+        }
+
+        .woocommerce-form-login{
+            margin: 0 auto;
+        }
+
+        .lost_reset_password{
+            .woocommerce-form-row--first{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.manage-subscription-page{
+    .wysiwyg-inner-page__content{
+        .forminator-custom-form{
+            .forminator-input , .forminator-textarea{
+                border-color: #46abd3;
+            }
+
+            .forminator-input{
+                height: 40px !important;
+            }
+
+            .forminator-button-submit{
+                width: 100% !important;
+                background-color: #46abd3 !important;
+                font-size: 20px !important;
+                color: #fff !important;
+                border-radius: 100px !important;
+
+            }
+
+            .forminator-label{
+                font-size: 14px !important;
+                font-weight: 400 !important;
+                color: #1e2746 !important;
+            }
+        }
+    }
+}

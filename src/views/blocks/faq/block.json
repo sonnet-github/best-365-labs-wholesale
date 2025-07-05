@@ -1,0 +1,24 @@
+{
+    "name": "acf/faq",
+    "title": "FAQ Accordion",
+    "description": "Theme styled faq accordion block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["faq", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "faq.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "faq/preview.jpg"
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.three-column-card-image-hover{
+    padding: 0 20px;
+    
+
+    &__title{
+        padding: 0 20px 25px;
+        h2{
+            font-size: 32px;
+            line-height: 45px;
+            color: rgb(66, 117, 174);
+            text-align: center;
+        }
+    }
+
+    &__wrapper{
+        padding: 62px 0;
+        border-bottom: 1px solid #46abd3;
+        border-top: 1px solid #46abd3;
+        max-width: 1503px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__container{
+        max-width: 980px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column{
+        max-width: 33.33%;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    &__content{
+        position: relative;
+        z-index: 2;
+    }
+
+    &__inner{
+        text-align: center;
+        border: 1px solid #46abd3;
+        position: relative;
+        min-height: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover{
+            .three-column-card-image-hover__img{
+                opacity: 1;
+            }
+
+            a , h5{
+                color: #fff;
+            }
+        }
+
+        h5{
+            font-size: 22px;
+            line-height: 31px;
+            color: #221f20;
+            font-weight: 500;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 24px;;
+            color: #4275ae;
+            font-weight: 500;
+        }
+    }
+
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        height: 100%;
+        width: 100%;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            line-height: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+
+        &__title{
+            h2{
+                font-size: 25px;
+                line-height: 34px;
+            }
+        }
+        &__column{
+            max-width: 50%;
+            margin-bottom: 10px;
+        }
+
+        &__wrapper {
+            padding: 40px 0;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        &__column{
+            max-width: 100%;
+        }
+
+        &__inner{
+            min-height: 100px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "acf/report-form",
+    "title": "Report Form",
+    "description": "Theme styled report form block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["report-form", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "report-form.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "report-form/preview.jpg"
+            }
+        }
+    }
+}

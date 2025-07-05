@@ -1,0 +1,159 @@
+.three-col-media-content-cta{
+    border-top: 2px solid #E5E5E5;
+    padding-top: 47px;
+    max-width: calc(100% - 100px);
+    width: 100%;
+    margin: 0 auto;
+    &__title{
+        margin-bottom: 36px;
+        h2{
+            font-size: 32px;
+            line-height: 45px;
+            color: rgb(66, 117, 174);
+            text-align: center;
+        }
+    }
+
+    &__container{
+        max-width: 1280px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -25px;
+    }
+
+    &__column{
+        max-width: 430px;
+        width: 100%;
+        padding: 0 25px;
+        margin-bottom: 50px;
+
+        &.video{
+            max-width: 632px;
+
+
+            .three-col-media-content-cta__inner{
+                border: 0;
+                padding: 0;
+                min-height: 0;
+                text-align: left;
+            }
+
+            .three-col-media-content-cta__text{
+                padding: 0;
+            }
+        }
+    }
+
+    &__inner{
+        text-align: center;
+        padding: 13px 10px 34px;
+        padding-bottom: 34px;
+        min-height: 575px;
+        position: relative;
+        border: 1px solid #46ABD3;
+
+        img , iframe{
+            margin-bottom: 15px;
+            max-width: 100%;
+        }
+
+        iframe{
+            height: 180px;;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 30px;
+            color: #221f20;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+    }
+
+    &__video{
+        iframe{
+            min-height: 327px;
+        }
+    }
+
+    &__cta{
+        position: absolute;
+        bottom: 46px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    &__text{
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 1366px){
+        max-width: calc(100% - 40px);
+
+        &__container{
+            max-width: 100%;
+            padding: 0;
+        }
+
+        &__inner{
+            p{
+                font-size: 17px;
+                line-height: 24px;
+            }
+
+            a.button{
+                bottom: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        &__row{
+            margin: 0 -12.5px;
+        }
+
+        &__column{
+            max-width: 50%;
+            padding: 0 12.5px;
+            margin-bottom: 25px;
+        }
+
+    }
+
+    @media screen and (max-width: 768px){
+        &__column{
+            max-width: 50%;
+        }
+
+        &__title{
+            h2{
+                font-size: 22px;
+                line-height: 31px;
+            }
+        }
+
+        &__inner{
+            padding-bottom: 80px;
+        }
+
+        &__cta{
+            bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 580px){
+        &__column{
+            max-width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "acf/three-col-media-content-cta",
+    "title": "Three Column Media & Content CTA",
+    "description": "Theme styled three column media & content cta block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["three-col-media-content-cta", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "three-col-media-content-cta.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "three-col-media-content-cta/preview.jpg"
+            }
+        }
+    }
+}

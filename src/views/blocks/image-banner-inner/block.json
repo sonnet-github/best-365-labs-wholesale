@@ -1,0 +1,24 @@
+{
+    "name": "acf/image-banner-inner",
+    "title": "Image Banner (Inner Pages)",
+    "description": "Theme styled image banner block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["image-banner-inner", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-banner-inner.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "image-banner-inner/preview.jpg"
+            }
+        }
+    }
+}

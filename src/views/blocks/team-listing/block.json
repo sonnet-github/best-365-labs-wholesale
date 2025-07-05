@@ -1,0 +1,24 @@
+{
+    "name": "acf/team-listing",
+    "title": "Team Listing",
+    "description": "Theme styled team listing block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["team-listing", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "team-listing.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "team-listing/preview.jpg"
+            }
+        }
+    }
+}

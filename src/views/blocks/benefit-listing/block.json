@@ -1,0 +1,24 @@
+{
+    "name": "acf/benefit-listing",
+    "title": "Benefit Listing",
+    "description": "Theme styled benefit listing block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["benefit-listing", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "benefit-listing.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "benefit-listing/preview.jpg"
+            }
+        }
+    }
+}

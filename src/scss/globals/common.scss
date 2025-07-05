@@ -1,0 +1,134 @@
+&{
+    scroll-behavior: smooth;
+}
+
+&, body{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px;
+    
+}
+
+#page-content{
+    position: relative;
+
+    width: 100%;
+    max-width: $pageMaxWidth;
+    margin: auto;
+}
+
+&.scroll-lock,
+body.no-scroll{
+    overflow: hidden !important;
+}
+
+$verticalPos : 'top' 'bottom' 'middle';
+$horizontalPos : 'left' 'center' 'right';
+@each $position in $verticalPos {
+    .va-#{$position} { 
+        vertical-align: #{$position};
+    }
+}
+@each $position in $horizontalPos {
+    .ta-#{$position} { 
+        text-align: #{$position};
+    }
+}
+
+$displays : 'block' 'flex' 'table' 'inline-block' 'inline' 'table-cell' 'table-row' 'grid';
+@each $display in $displays {
+    .dp-#{$display} {
+        display: #{$display};
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.tb-wr{
+    display: table;
+    width: 100%;
+}
+
+.tb-r-wr{
+    display: table-row;
+}
+
+.tb-c-wr{
+    display: table-cell;
+}
+
+a{
+    color: inherit;
+    text-decoration: underline;
+    outline: none;
+}
+
+ul{
+    list-style-type: disc;
+    list-style-position: inside; 
+    text-align: left;
+    padding-left: 15px;
+}
+
+ol{
+    list-style: decimal;
+    list-style-position: inside; 
+    text-align: left;
+    padding-left: 15px;
+}
+
+.container-block{
+    max-width: $containerMaxWidth;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 24px;
+    
+    @media(max-width: $bp_desktopSmall){
+        padding: 0px 24px;
+    }
+}
+
+.content-block{
+    max-width: $contentMaxWidth;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*[data-ux="scroll-to-anchor"]{
+    cursor: pointer;
+    user-select: none;
+}
+
+.mobile-only{
+    display: none;       
+}
+
+.portrait-only{
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .landscape-only{
+        display: none !important;
+    }
+    .portrait-only{
+        display: block;
+        &.iblock{
+            display: inline-block;
+        }
+    }
+}
+
+@media(max-width: $bp_mobileMenuShift){
+    .desktop-only{
+        display: none !important;
+    }
+    .mobile-only{
+        display: block;
+        &.iblock{
+            display: inline-block;
+        }
+    }
+}

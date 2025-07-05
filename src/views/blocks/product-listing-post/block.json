@@ -1,0 +1,24 @@
+{
+    "name": "acf/product-listing-post",
+    "title": "Product Listing (Post Type)",
+    "description": "Theme styled product listing for post type block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["product-listing-post", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "product-listing-post.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "product-listing-post/preview.jpg"
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "acf/form-four-column",
+    "title": "Form w/ Four Column Content",
+    "description": "Theme styled form four column block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["form-four-column", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "form-four-column.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "form-four-column/preview.jpg"
+            }
+        }
+    }
+}

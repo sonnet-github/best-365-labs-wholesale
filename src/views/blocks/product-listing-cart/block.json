@@ -1,0 +1,24 @@
+{
+    "name": "acf/product-listing-cart",
+    "title": "Product Listing w/ Cart",
+    "description": "Theme styled product listing block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["product-listing-cart", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "product-listing-cart.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "product-listing-cart/preview.jpg"
+            }
+        }
+    }
+}

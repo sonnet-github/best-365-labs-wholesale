@@ -1,0 +1,177 @@
+.featured-product-horizontal{
+    padding: 61px 0 55px;
+    background-color: rgb(70,171,211);
+
+    &__content{
+        margin-bottom: 6px;
+        p{
+            font-size: 18px;
+            line-height: 31px;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+
+
+    &__container{
+        max-width: 810px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__product{
+        display: flex;
+        h4{
+            font-size: 20px;
+            line-height: 28px;
+            color: #FFF;
+            font-weight: 500;
+          
+        }
+
+        &-image{
+            p{
+                font-size: 18px;
+                line-height: 31px;
+                font-weight: 500;
+                color: #fff;
+            }
+        }
+    }
+
+    &__details{
+        padding-left: 20px;
+
+        h3{
+            &.additional-text{
+                font-size: 20px;
+                line-height: 34px;
+                color: #fff;
+                margin-bottom: 15px;
+                font-weight: 400;
+
+                
+            }
+        }
+
+        
+
+    }
+
+    &__product-add{
+        margin-bottom: 10px;
+        h3{
+            font-size: 20px;
+            line-height: 34px;
+            color: #fff;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p{
+            font-size: 15px !important;
+            line-height: 21px;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    &__product-price{
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 10px;
+       
+        h3{
+            font-size: 25px;
+            line-height: 35px;
+            color: #FFF;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0em;
+            color: #FFF;
+            
+        }
+    }
+
+    &__product-cta{
+        a.button{
+            font-size: 17px;
+            line-height: 26px;
+            color: rgb(66, 117, 174);
+            display: inline-flex;
+            height: 40px;
+            min-width: 221px;
+            background-color: #fff;
+            padding: 0 20px;
+            font-weight: 500;
+
+            &.buy{
+                min-width: 221px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        padding: 40px 0;
+        
+        &__content{
+            margin-bottom: 20px;
+            p{
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+
+        &__details{
+            padding-left: 0;
+        }
+
+        &__product{
+            flex-direction: column;
+            text-align: center;
+
+            &-image{
+                img{
+                    max-width: 100%;
+                }
+            }
+            h4{
+                font-size: 22px;
+                line-height: 31px;
+            }
+
+            &-price{
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+                h3{
+                    font-size: 28px;
+                    line-height: 39px;
+                }
+
+                p{
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+
+            &-cta{
+                a.button{
+                    min-width: 248px;
+                }
+            }
+        }
+
+        
+
+       
+    }
+}

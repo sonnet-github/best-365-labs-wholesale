@@ -1,0 +1,138 @@
+.video-slider{
+    padding: 55px 0;
+
+    &__container{
+        max-width: 580px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+
+        &:hover{
+            .video-slider__arrow{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__inner{
+        position: relative;
+        height: 303px;
+        cursor: pointer;
+
+       
+    }
+
+    &__thumbnail{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content{
+        max-width: 420px;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h3{
+            font-size: 28px;
+            line-height: 38px;
+            font-weight: 500;
+            color : #fff;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__video{
+        height: 100%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__next{
+        svg{
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__row{
+        .slick-slide{
+            display: block;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        width: 100%;
+        padding: 0 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button{
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+
+            &.slick-disabled{
+                opacity: 0;
+            }
+
+            svg{
+                width: 23px;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+
+    }
+
+    &__play{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            width: 34px;
+            height: 34px;
+
+            path{
+                fill: #fff;
+            }
+        }
+
+        p{
+            font-size: 16px;
+            color : #fff;
+            text-decoration: underline;
+            margin-left: 11px;
+        }
+    }
+
+}

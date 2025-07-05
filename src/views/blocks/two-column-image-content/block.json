@@ -1,0 +1,24 @@
+{
+    "name": "acf/two-column-image-content",
+    "title": "Two Column Image & Content",
+    "description": "Theme styled two column image content block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["two-column-image-content", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "two-column-image-content.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "two-column-image-content/preview.jpg"
+            }
+        }
+    }
+}

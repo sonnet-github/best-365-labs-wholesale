@@ -1,0 +1,24 @@
+{
+    "name": "acf/wysiwyg-inner-page-v2",
+    "title": "WYSIWYG Inner Page v2",
+    "description": "Theme styled wysiwyg inner page v2 block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["wysiwyg-inner-page-v2", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "wysiwyg-inner-page-v2.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "wysiwyg-inner-page-v2/preview.jpg"
+            }
+        }
+    }
+}

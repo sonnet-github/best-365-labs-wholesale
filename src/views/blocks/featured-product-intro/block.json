@@ -1,0 +1,24 @@
+{
+    "name": "acf/featured-product-intro",
+    "title": "Featured Product Introduction",
+    "description": "Theme styled featured product introduction block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["featured-product-intro", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-product-intro.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "featured-product-intro/preview.jpg"
+            }
+        }
+    }
+}

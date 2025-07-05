@@ -1,0 +1,24 @@
+{
+    "name": "acf/post-full-width-image",
+    "title": "Full Width Image Post Block",
+    "description": "Theme styled full width image banner block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["post-full-width-image", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "post-full-width-image.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "post-full-width-image/preview.jpg"
+            }
+        }
+    }
+}

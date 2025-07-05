@@ -1,0 +1,24 @@
+{
+    "name": "acf/form",
+    "title": "Form",
+    "description": "Theme styled form block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["form", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "form.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "form/preview.jpg"
+            }
+        }
+    }
+}

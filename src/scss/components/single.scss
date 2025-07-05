@@ -1,0 +1,437 @@
+.single-post{
+    padding-bottom: 50px;
+
+    &__container{
+        max-width: 980px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    &__title{
+        padding: 60px 99px 0;
+        margin-bottom: 40px;
+
+        h1{
+            font-size: 40px;
+            line-height: 50px;
+            color: #221f20;
+            margin-bottom: 30px;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 27px;
+            color: #221f20;
+            font-weight: 600;
+        }
+    }
+
+    &__banner{
+        img{
+            line-height: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__content{
+        
+        border: 1px solid rgb(200 199 199 / 75%);
+        margin-bottom: 30px;
+
+        &-wrapper{
+            padding: 60px 99px;
+        }
+
+       
+
+        &-text{
+            max-width: 740px;
+            width: 100%;
+            padding-bottom: 50px;
+
+            .wp-block-buttons{
+                
+                .wp-block-button__link {
+                    background: #46ABD3;
+                    border-radius: 19px;
+                    font-size: 14px;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 60px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    height: 45px;
+
+                    transition: all 0.3s ease;
+
+                    &:hover{
+                        background: #C8C7C7;
+                        color: #fff;
+                    }
+                }
+            }
+
+            ul , ol{
+                margin-bottom: 21px;
+                li{
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #221f20;
+                    margin-bottom: 21px;
+                    text-indent: -20px;
+                    margin-left: 20px;
+
+                    strong{
+                        font-weight: 600;
+                    }
+
+                    em{
+                        font-style: italic;
+                    }
+                }
+            }
+
+
+
+            h2{
+                font-size: 28px;
+                line-height: 35px;
+                color: #4b75ab;
+            }
+
+            h3{
+                font-size: 22px;
+                line-height: 27px;
+                color: #4b75ab;
+                margin-bottom: 27px;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 27px;
+                color: #221f20;
+                margin-bottom: 21px;
+
+                strong{
+                    font-weight: 600;
+                }
+
+                em{
+                    font-style: italic;
+                }
+
+                &.sub{
+                    font-size: 12px !important;
+                    line-height: 20px !important;
+                }
+
+     
+            }
+
+            sub{
+                font-size: 12px !important;
+                line-height: 20px !important;
+            }
+
+            hr{
+                &.wp-block-separator{
+                    border-top: 1px solid;
+                    max-width: 74px;
+                    margin-left: 0;
+                    padding: 14px 0;
+                }
+
+                &.is-style-wide{
+                    max-width: 100% !important;
+                }
+            }
+
+            em{
+                font-style: italic;
+            }
+           
+            
+          
+        }
+
+        &-share{
+            padding: 18px 0;
+
+            ul{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                margin: 0;
+
+                li{
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        &-category{
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgb(200 199 199 / 75%);
+            ul{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                margin: 0;
+
+                li{
+                    align-items: center;
+
+                    &:last-child{
+                        &::after{
+                            display: none;
+                        }
+                    }
+
+                    &::after{
+                        content: "·";
+                        margin: 0 6px;
+                    }
+                    
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+   &__recent-post{
+    margin-bottom: 30px;
+
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        p{
+            font-size: 18px;
+            line-height: 27px;
+            color: #221f20;
+        }
+
+        a{
+         font-size: 14px;
+         line-height: 21px;
+         color: #221f20;
+         text-decoration: none;
+        }
+    }
+   }
+
+   &__recent-row{
+     display: flex;
+     margin: 0 -17px;
+
+     .slick-slide{
+        display: block;
+     }
+
+     
+     .slick-dots{
+        bottom: -40px;
+        li{
+            margin: 0;
+            button{
+                &::before{
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+   }
+
+   &__recent-column{
+    max-width: 33.33%;
+    width: 100%;
+
+    padding: 0 17px;
+   }
+
+   &__recent-inner{
+    border: 1px solid rgb(200 199 199 / 75%);
+    position: relative;
+
+    a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+   }
+
+   &__recent-thumb{
+    height: 162px;
+    line-height: 0;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   }
+
+   &__recent-text{
+    padding: 24px;
+    min-height: 104px;
+
+    h3{
+        font-size: 18px;
+        color: #221f20;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: var(--lines, 2);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: normal;
+    }
+   }
+
+   &__comment{
+    border: 1px solid rgb(200 199 199 / 75%);
+    padding: 60px;
+
+    &-text{
+        padding-bottom: 16px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid rgb(200 199 199 / 75%);
+        p{
+            font-size: 16px;
+            line-height: 16px;
+            color: #221f20;
+        }
+    }
+
+    &-box{
+        padding: 20px;
+        border: 1px solid rgb(200 199 199 / 75%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            margin-right: 8px;
+        }
+
+        p{
+          font-size: 16px;
+          line-height: 22px;  
+        }
+    }
+
+    
+   }
+
+
+   @media screen and (max-width: 768px){
+
+    &__container{
+        padding: 0;
+    }
+
+    &__content{
+        border: 0;
+        padding: 0;
+
+        &-wrapper{
+            padding: 60px 20px;
+        }
+
+        h1{
+            font-size: 26px;
+            line-height: 36px;
+            color: #221f20;
+
+        }
+
+        &-text{
+            .wp-block-image img{
+                figure{
+                    text-align: center;
+                }
+               
+            }
+
+
+
+            h2{
+                font-size: 24px;
+                line-height: 34px;
+            }
+            h3{
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            ul , ol{
+                li{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            hr.wp-block-separator{
+                max-width: 28px;
+            }
+        }
+    }
+
+    &__title{
+        padding: 60px 20px 0;
+    }
+
+    &__recent-column{
+        max-width: 100%;
+        padding: 0 6px;
+    }
+
+    &__recent-inner{
+        // max-width: 248px;
+        width: 100%;
+        border: 0;
+    }
+
+    &__recent-post{
+        padding-bottom: 50px;
+        overflow: hidden;
+
+        &-header{
+            padding: 0 20px;
+        }
+    }
+
+    &__comment{
+        padding: 20px 0;
+        border-bottom: 0;
+
+        &-text{
+            padding: 0 16px 20px;
+         }
+
+         &-box{
+            max-width: calc(100% - 40px);
+            width: 100%;
+            margin: 0 auto;
+         }
+    }
+   }
+
+
+
+
+}

@@ -1,0 +1,24 @@
+{
+    "name": "acf/blog-listing",
+    "title": "Blog Listing",
+    "description": "Theme styled blog listing block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["blog-listing", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blog-listing.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "blog-listing/preview.jpg"
+            }
+        }
+    }
+}

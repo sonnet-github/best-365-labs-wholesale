@@ -1,0 +1,24 @@
+{
+    "name": "acf/two-column-image-card",
+    "title": "Two Column Image Card",
+    "description": "Theme styled two column image card block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["two-column-image-card", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "two-column-image-card.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "two-column-image-card/preview.jpg"
+            }
+        }
+    }
+}

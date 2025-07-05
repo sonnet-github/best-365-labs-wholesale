@@ -1,0 +1,226 @@
+.user-login{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+
+    &__wrapper{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close{
+        position: absolute;
+        top: 60px;
+        right: 60px;
+
+        button{
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__header{
+        text-align: center;
+    }
+
+    &__divider{
+        border-bottom: 1px solid;
+        border-color: rgba(var(--color_13), var(--alpha-color_13, 1));
+        height: 11px;
+        margin: 12px auto 24px;
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+
+        span{
+            background-color: #fff;
+            color: rgb(34 31 32);
+            font-size: 16px;
+            padding: 0 13px;
+        }
+    }
+
+    &__form-login{
+        label{
+            font-size: 14px;
+            color: #595758;
+        }
+
+        input[type="text"],input[type="password"]{
+            height: 37px;
+            border: 0;
+            border-bottom: 1px solid #595758;
+            color: #595758;
+            width: 100%;
+        }
+
+        p.login-username{
+            margin-bottom: 25px !important;
+        }
+
+        p.login-password{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px !important;
+        }
+
+        p.login-remember{
+            margin-bottom: 25px !important;
+        }
+
+        p.login-submit{
+            .button{
+                background-color: #cccccc !important;
+                color: #fff !important;
+                height: 48px !important;
+                width: 100% !important;
+                border: 0 !important;
+                font-weight: 400 !important;
+                border-radius: 0 !important;
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    &__form-single-email{
+
+        .forminator-custom-form{
+            .forminator-button-submit{
+                background-color: #cccccc !important;
+                color: #fff !important;
+                height: 48px !important;
+                width: 100% !important;
+                border: 0 !important;
+                font-weight: 400 !important;
+                border-radius: 0 !important;
+                font-size: 16px !important;
+            }
+            .forminator-field{
+                label{
+                    font-size: 14px !important;
+                    color: #595758 !important;
+                    font-weight: 400 !important;
+                }
+
+                input{
+                    height: 37px !important;
+                    border: 0 !important;
+                    border-bottom: 1px solid #595758 !important;
+                    color: #595758 !important;
+                    width: 100% !important;
+                    border-radius:  0 !important;
+                }
+            }
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li{
+                .nsl-button{
+                    border: 0 !important;
+                }
+                .nsl-button-svg-container{
+                    padding: 0;
+                    border: 0;
+
+                }
+
+                svg{
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+        }
+    }
+
+    #loginEmail , #signupEmail , #singleLogin{
+        display: none;
+    }
+
+    .public-profile{
+        margin-top: 48px;
+        display: block;
+        text-align: center;
+        
+        p{
+            font-size: 15px;
+        }
+    }
+
+    #signupemail , #loginwEmail , #signupemailForm{
+        width: 100%;
+        color: #221f20 !important;
+        border: 1px solid #221f20;
+        background-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    &__form{
+        max-width: 320px;
+        margin: 0 auto;
+        width: 100%;
+
+        .nsl-container-buttons{
+            width: 100%;
+        }
+
+        div.nsl-container .nsl-button-google[data-skin="light"]{
+            box-shadow: none;
+            border: 1px solid rgb(218 220 224);
+        }
+
+        .nsl-button-label-container{
+            color: #221f20 !important;
+            padding: 14px 0;
+        }
+    }
+
+    &__container{
+        max-width: 415px;
+        width: 100%;
+       
+
+       
+    }
+
+    &__header{
+        h2{
+            font-size: 48px;
+            line-height: 48px;
+            color: #221f20;
+            margin-bottom: 24px;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 25px;
+            color: #221f20;
+            margin-bottom: 32px;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

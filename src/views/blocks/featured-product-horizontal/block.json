@@ -1,0 +1,24 @@
+{
+    "name": "acf/featured-product-horizontal",
+    "title": "Featured Product Horizontal",
+    "description": "Theme styled featured product horizontal block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["featured-product-horizontal", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-product-horizontal.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "featured-product-horizontal/preview.jpg"
+            }
+        }
+    }
+}

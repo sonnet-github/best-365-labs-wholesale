@@ -1,0 +1,24 @@
+{
+    "name": "acf/icon-listing",
+    "title": "Icon Listing",
+    "description": "Theme styled icon listing block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["icon-listing", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "icon-listing.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "icon-listing/preview.jpg"
+            }
+        }
+    }
+}

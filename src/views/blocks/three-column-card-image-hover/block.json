@@ -1,0 +1,24 @@
+{
+    "name": "acf/three-column-card-image-hover",
+    "title": "Three Column Card Image Hover",
+    "description": "Theme styled three column card image hover block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["three-column-card-image-hover", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "three-column-card-image-hover.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "three-column-card-image-hover/preview.jpg"
+            }
+        }
+    }
+}

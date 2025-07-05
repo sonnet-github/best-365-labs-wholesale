@@ -1,0 +1,24 @@
+{
+    "name": "acf/video-gallery-modal",
+    "title": "Video Gallery Modal",
+    "description": "Theme styled Video Gallery Modal block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["video-gallery-modal", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "video-gallery-modal.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "video-gallery-modal/preview.jpg"
+            }
+        }
+    }
+}

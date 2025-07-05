@@ -1,0 +1,24 @@
+{
+    "name": "acf/doctor-banner",
+    "title": "Doctor Banner",
+    "description": "Theme styled Doctor Banner block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["doctor-banner", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "doctor-banner.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "doctor-banner/preview.jpg"
+            }
+        }
+    }
+}

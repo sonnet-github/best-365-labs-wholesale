@@ -1,0 +1,24 @@
+{
+    "name": "acf/supplement-facts",
+    "title": "Supplement Facts",
+    "description": "Theme styled supplement facts block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["supplement-facts", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "supplement-facts.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "supplement-facts/preview.jpg"
+            }
+        }
+    }
+}

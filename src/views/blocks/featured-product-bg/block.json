@@ -1,0 +1,24 @@
+{
+    "name": "acf/featured-product-bg",
+    "title": "Featured Product w/ Background Image",
+    "description": "Theme styled featured product w/ background imageblock.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["featured-product-bg", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-product-bg.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "featured-product-bg/preview.jpg"
+            }
+        }
+    }
+}
