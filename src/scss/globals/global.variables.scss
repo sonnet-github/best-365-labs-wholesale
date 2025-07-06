@@ -1,9 +1,7 @@
 /* Colors */
     $colorScheme : (
         // Color scheme 1
-        (#032C1F, #223628, #C9CDBE, #000000, #98AA6C, #204535),
-        // Color scheme 2
-        (#002755, #FFFFFF, #000000)
+        (#221F20, #4275AE),
     );
     // set active color scheme
     $activeColorScheme : 1;
@@ -20,7 +18,7 @@
         // Font scheme 1
         ('mrs-eaves-xl-serif', 'proxima-nova', 'mrs-eaves-xl-serif-narrow'),
         // Font scheme 2
-        ('Roboto')
+        ('Montserrat')
     );
     // set active font scheme
     $activeFontScheme : 1;
