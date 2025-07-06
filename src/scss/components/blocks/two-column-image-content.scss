@@ -1,4 +1,4 @@
-.two-column-image-content{
+.two-column-image-content {
     &__title{
         padding: 49px 0 54px;
         
@@ -115,6 +115,40 @@
             p{
                 font-size: 16px;
                 line-height: 22px;
+            }
+        }
+    }
+
+    &.home {
+
+        .two-column-image-content__title {
+            display: none;
+        }
+
+        .two-column-image-content__container {
+            padding: 55px;
+            background-color: rgba(70, 171, 211, .20);
+        }
+
+        .two-column-image-content__text {
+
+            h2, h3, h4, h5 {
+                color: getColor(2);
+                margin-bottom: 50px;
+            }
+
+            h2 {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 40px;
+            }
+
+            strong {
+                font-weight: 700;
             }
         }
     }
