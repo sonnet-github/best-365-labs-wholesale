@@ -30,6 +30,7 @@
     &__socials{
         display: flex;
         padding-top: 46px;
+        width: 37%;
         
         ul{
             li{
@@ -67,8 +68,6 @@
         &-left{
            flex: 1;
            display: flex;
-           padding-right: 57px;
-           justify-content: space-between;
         }
 
         &-right{
@@ -77,8 +76,16 @@
         }
     }
 
+    &__menu.one {
+        width: 28.25%;
+    }
+
+    &__menu.two {
+        width: 36%;
+    }
+
     &__address{
-       
+        width: 37.75%;
 
         p{
             font-size: 22px;
@@ -110,6 +117,13 @@
                     color: #fff;
                     text-decoration: none;
                 }
+            }
+        }
+
+        &.one {
+
+            ul li:first-child a {
+                text-transform: uppercase;
             }
         }
     }

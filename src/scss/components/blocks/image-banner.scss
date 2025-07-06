@@ -1,6 +1,6 @@
 .image-banner{
     position: relative;
-    height: 580px;
+    height: 650px;
 
     &.image-banner--v2{
         height: 380px;
@@ -78,7 +78,7 @@
     &__container{
         position: relative;
         z-index: 2;
-        max-width: 940px;
+        max-width: 1666px;
         width: 100%;
         padding: 0 20px;
         margin: 0 auto;
@@ -99,12 +99,12 @@
     }
 
     &__content{
-        max-width: 538px;
-        padding-top: 40px;
+        max-width: 696px;
+        padding-top: 52px;
 
         h1 , h2{
-            font-size: 30px;
-            line-height: 42px;
+            font-size: 45px;
+            line-height: 65px;
             font-weight: 500;
             color: #4275AE;
             margin-bottom: 20px;
@@ -171,7 +171,7 @@
        &::after{
         height: 50px;
         background-size: 50% 100%;
-        bottom: -1px;
+        bottom: 21px;
        }
 
        &__content{

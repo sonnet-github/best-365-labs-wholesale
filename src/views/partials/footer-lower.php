@@ -129,12 +129,6 @@
                         <?php echo $address;?>
                     </div>
                 </div>
-
-                <div class="footer__mid-right">
-                    <div class="footer__newsletter">
-                        <?php echo $form;?>
-                    </div>
-                </div>
             </div>
         
 
