@@ -1,0 +1,24 @@
+{
+    "name": "acf/quick-links",
+    "title": "Quick Links",
+    "description": "Theme styled Quick Links block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["quick-links", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "quick-links.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "quick-links/preview.jpg"
+            }
+        }
+    }
+}
