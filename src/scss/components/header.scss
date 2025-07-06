@@ -110,6 +110,8 @@
     }
 
     &__menu{
+        width: 77.51%;
+
         ul{
             list-style: none;
             padding: 0;
@@ -117,7 +119,7 @@
             display: flex;
 
             li{
-                margin-right: 20px;
+                margin-right: 35px;
                 position: relative;
 
                 &.current-menu-parent{
@@ -141,9 +143,8 @@
                 }
 
                 a{
-                    font-size: 15px;
-                    letter-spacing: 0.24px;
-                    color: #221F20;
+                    font-size: 24px;
+                    letter-spacing: 0.10px;
                     text-decoration: none;
                     font-weight: 500;
                 }
@@ -177,15 +178,113 @@
     }
 
     &__logo{
-        margin-right: 35px;
-        max-width: 195px;
+        width: 22.49%;
+
         img{
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
     }
 
-  
+    &__panel {
+
+        ul {
+            text-align: right;
+            list-style: none;
+            padding: 0;
+        }
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 45px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+                a {
+                    text-decoration: none;
+                    font-size: 24px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+
+                .bag-btn img {
+                    margin: 0;
+                }
+    }
+
+    &__mega-menu {
+        background-color: #F2F2F2;
+        padding: 63px 0;
+        position: fixed;
+        width: 100%;
+        top: 112px;
+        left: 0;
+        z-index: 2;
+        display: none;
+
+        &-container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            &-inner {
+                
+                h4 {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #093141;
+                    margin-bottom: 30px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #707070;
+                        left: 0;
+                        bottom: -20px;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        line-height: 30px;
+
+                        a {
+                            font-size: 22px;
+                            color: getColor(2);
+                            line-height: 40px;
+                            text-decoration: none;
+                        }
+                    }
+
+
+                }
+            }
+    }
+
     // @media screen and (max-width: 1367px){
     //     &__menu{
     //         ul{
