@@ -109,6 +109,10 @@ ol{
     display: none;
 }
 
+.text-center {
+    text-align: center;
+}
+
 @media (orientation: portrait) {
     .landscape-only{
         display: none !important;
