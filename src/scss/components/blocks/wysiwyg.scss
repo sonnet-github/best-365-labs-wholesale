@@ -373,3 +373,22 @@
         }
     }
 }
+
+.home-wysiwyg-2 {
+    padding: 100px 0;
+
+    .wysiwyg__content {
+        max-width: 1344px;
+        margin: 0 auto;
+
+        * {
+            color: #fff;
+        }
+        
+        p {
+            font-size: 35px;
+            line-height: 55px;
+            font-weight: 500;
+        }
+    }
+}
