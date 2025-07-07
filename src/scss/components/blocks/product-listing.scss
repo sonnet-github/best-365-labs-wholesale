@@ -1,5 +1,6 @@
 .product-listing{
-    padding-bottom: 69px;
+    padding: 91px 0 133px;
+
     overflow: hidden;
 
     &.three{
@@ -17,18 +18,33 @@
         }
     }
 
+    &.two {
+
+        .product-listing__container {
+            max-width: 1820px;
+            width: auto;
+        }
+
+        .product-listing__column {
+            width: 50%;
+            padding: 0 50px;
+            max-width: unset;
+        }
+    }
+
     &__title{
-        padding: 53px 20px 60px;
+        margin-bottom: 90px;
+
         h2{
-            font-size: 32px;
-            line-height: 45px;
-            color: #4275AE;
+            font-size: 50px;
+            line-height: 1;
+            color: getColor(2);
             text-align: center;
         }
     }
 
     &__container{
-        max-width: 1717px;
+        max-width: 1820px;
         margin: 0 auto;
         width: 100%;
     }
@@ -48,10 +64,11 @@
     }
 
     &__inner{
-        padding: 20px 0 100px;
+        padding: 25px 50px 25px 0;
         background-color: #F9F9F9 ;
         position: relative;
         height: 100%;
+        display: flex;
 
         img{
             max-width: 100%;
@@ -59,45 +76,59 @@
         }
     }
 
+        &__column-left {
+            width: 52.73%;
+        }
+
+        &__column-right {
+            width: 47.27%;
+            display: flex;
+            padding: 22px 0;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
     &__details{
-        max-width: 323px;
-        width: 100%;
-        margin: 0 auto;
+        
     }
 
     &__name{
-        margin-bottom: 20px;
-        margin-top: 20px;
+       margin-bottom: 28px;
+
         h5{
-            font-size: 23px;
-            line-height: 32px;
-            color: #4275AE;
-            text-align: center;
+            font-size: 35px;
+            line-height: 1;
+            color: getColor(2);
             font-weight: 500;
-            
         }
     }
 
     &__desc{
-        min-height: 95px;
-        text-align: center;
-        margin-bottom: 35px;
         p{
-            font-size: 14px;
-            line-height: normal;
+            font-size: 25px;
+            line-height: 30px;
             letter-spacing: 0px;
-            color: #221F20;
+            margin-bottom: 27px;
+            
+        }
+
+        *:last-child {
+            margin-bottom: 0;
         }
     }
 
     &__cta{
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
+        padding-top: 46px;
         width: 100%;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        padding-top: 53px;
     }
 
     @media screen and (max-width: 1480px){

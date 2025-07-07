@@ -85,6 +85,23 @@
             "placeholder": "",
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_686b3628c62cd",
+            "label": "Button",
+            "name": "button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -105,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751683879
+    "modified": 1751856699
 }

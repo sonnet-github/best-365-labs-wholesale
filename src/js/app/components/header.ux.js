@@ -38,11 +38,59 @@ class HeaderUX {
         this.sidemenu();
         this.loginPopup();
         this.loginShuffle();
+        this.megaMenu();
+        this.radioClick();
 
         $(window).resize(() => {
             this.adjustNav();
         });
 
+    }
+
+    radioClick(){
+        var $items = $('.wcsatt-options-prompt-radios .wcsatt-options-prompt-radio');
+  
+        // helper to sync classes
+        function syncActive($input){
+          $items.removeClass('active');
+          $input.closest('.wcsatt-options-prompt-radio').addClass('active');
+        }
+        
+        // when a radio actually changes...
+        $('input.wcsatt-options-prompt-action-input[type=radio]')
+          .on('change', function(){
+            syncActive($(this));
+          });
+        
+        // OPTIONAL: if you want clicking the LI to also select it
+        $items.on('click', function(e){
+          // but skip if user actually clicked the input itself
+          if (!$(e.target).is('input')) {
+            var $r = $(this).find('input[type=radio]').prop('checked', true);
+            syncActive($r);
+            $r.trigger('change');
+          }
+        });
+        
+        // initialize on page-load
+        var $pre = $('input.wcsatt-options-prompt-action-input:checked');
+        if ($pre.length) syncActive($pre);
+    }
+
+    megaMenu() {
+        var $shop = $('#menu-item-23103 , #menu-item-1162'),
+        $mega = $('.header__mega-menu');
+  
+        $shop.hover(
+        function() { $mega.stop(true,true).slideDown(200); },
+        function() { $mega.stop(true,true).slideUp(200); }
+        );
+    
+        // keep it open if you hover over the panel itself
+        $mega.hover(
+        function() { $mega.stop(true,true).show(); },
+        function() { $mega.stop(true,true).slideUp(400); }
+        );
     }
 
     loginShuffle(){
@@ -235,24 +283,36 @@ class HeaderUX {
 
     formDownload(){
 
-        jQuery(document).ready(function($) {
-            // Grab your Forminator form by ID
-            var $myForm = $("#forminator-module-317");
-        
-            // Bind to the 'ajax:complete' event on this form
-            $myForm.bind('ajax:complete', function(event, xhr, settings) {
-             
-              
-
-              $("#download-container").html(
-                "<a href='/wp-content/uploads/2025/03/blank.pdf' download>Download Your File</a>"
-              );
+        jQuery(function($){
+            // ← change this to your actual PDF URL:
+            var PDF_URL = '/wp-content/uploads/2025/04/Strategies-and-dietary-supplements-to-help-stay-healthier-and-enhance-life.pdf';
+          
+            // target any form with the .ajax-download class
+            $('#forminator-module-317').on('submit', function(e){
+              e.preventDefault();                // stop normal navigation
+              var $form = $(this);
+          
+              $.ajax({
+                url:    $form.attr('action'),    // form action URL
+                method: $form.attr('method') || 'POST',
+                data:   $form.serialize()        // serialize all inputs
+              })
+              .done(function(response){
+               
+                if ( !$form.next('.pdf-download-link').length ) {
+                  $form.after(
+                    '<p class="pdf-download-link">'+
+                      '<a href="'+PDF_URL+'" download> Click Here to Download Special Report Now report</a>'+
+                    '</p>'
+                  );
+                }
+              })
+              .fail(function(xhr, status, err){
+                console.error('Form submission failed:', err);
+                alert('Sorry, there was a problem. Please try again.');
+              });
             });
-          })
-
- 
-        
-        
+          });
     }
 
     menu(){
@@ -274,7 +334,7 @@ class HeaderUX {
 
     }
 
-    bindEventTriggers() {
+    bindEventTriggers() { 
 
         this.$triggers.mobile_menu_toggle.unbind('click');
         this.$triggers.mobile_menu_toggle.bind('click', () => {
@@ -396,6 +456,12 @@ class HeaderUX {
         var $firstColumn = $('.custom-single-product__accordion .faq__column:first-child');
         $firstColumn.find('.faq__heading').addClass('active');
         $firstColumn.find('.faq__content-toggle').toggle();
+
+        var $faq = $('.custom-single-product__faq');
+
+        var $firstCol = $faq.find('.faq__column').first();
+        $firstCol.find('.faq__heading').addClass('active');
+        $firstCol.find('.faq__content-toggle').show(); // or .slideDown(0)
     
         $('.faq__heading').on('click', function(){
             var $currentHeading = $(this);
