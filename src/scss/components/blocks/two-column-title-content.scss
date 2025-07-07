@@ -1,0 +1,57 @@
+.two-column-title-content {
+    padding: 0 20px;
+
+    &__container {
+        max-width: 1820px;
+        margin: 0 auto;
+    }
+
+        &__row {
+            border-top: 2px solid #E5E5E5;
+            padding: 97px 0 53px;
+            display: flex;
+        }
+
+            &__left {
+                width: 33.40%;
+                padding: 0 100px;
+            }
+
+                &__title {
+                    font-size: 35px;
+                    line-height: 45px;
+                    font-weight: 500;
+                    color: getColor(2);
+                }
+
+            &__right {
+                width: 66.60%;
+            }
+
+                &__content {
+                    p {
+                        font-size: 25px;
+                        line-height: 40px;
+                        font-weight: 500;
+                        color: inherit;
+
+                    }
+
+                    p, li {
+                        margin-bottom: 15px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    ul,
+                    ol {
+                        padding-left: 0;
+                    }
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+}

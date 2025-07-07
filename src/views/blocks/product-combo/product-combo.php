@@ -50,7 +50,7 @@
                         $cta              = $wc_product->get_permalink();
                         $shortname        = get_field('short_name', $product->ID);
                         $featuredImg      = get_the_post_thumbnail( $product->ID, 'full' );   
-                        $shortdesc          = get_field('product_short_description_home_page', $product->ID);
+                        $shortdesc         = get_field('product_short_description_home_page', $product->ID);
                     ?>
                         
                     

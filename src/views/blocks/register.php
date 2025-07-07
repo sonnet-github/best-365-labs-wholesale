@@ -46,7 +46,8 @@
             'product-listing-post',
             'quick-links',
             'card-content-list',
-            'product-combo'
+            'product-combo',
+            'two-column-title-content'
         ];
 
         foreach($acf_blocks as $block){

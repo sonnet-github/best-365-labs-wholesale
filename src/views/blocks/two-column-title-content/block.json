@@ -1,0 +1,24 @@
+{
+    "name": "acf/two-column-title-content",
+    "title": "Two Column Title Content",
+    "description": "Theme styled Two Column Title Content block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["two-column-title-content", "content", "title"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "two-column-title-content.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "two-column-title-content/preview.jpg"
+            }
+        }
+    }
+}

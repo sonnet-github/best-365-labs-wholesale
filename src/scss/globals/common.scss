@@ -171,6 +171,14 @@ ol{
             }
 }
 
+.bg-primary {
+    background-color: getColor(2) !important;
+}
+
+.bg-secondary {
+    background-color: getColor(3) !important;
+}
+
 @media (orientation: portrait) {
     .landscape-only{
         display: none !important;
