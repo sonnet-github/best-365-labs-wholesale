@@ -1,0 +1,26 @@
+.product-combo {
+    padding: 90px 20px 102px;
+
+    &__container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+        &__title {
+            text-align: center;
+            font-size: 50px;
+            line-height: 1;
+            color: getColor(2);
+            margin-bottom: 94px;
+        }
+
+        &__list {
+            display: flex;
+            margin: 0 -25px;
+        }
+
+            &__item {
+                width: calc(100% / 3);
+                padding: 0 25px;
+            }
+}

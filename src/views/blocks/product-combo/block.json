@@ -1,0 +1,24 @@
+{
+    "name": "acf/product-combo",
+    "title": "Product Combo",
+    "description": "Theme styled Product Combo block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["product-combo", "product", "list"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "product-combo.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "product-combo/preview.jpg"
+            }
+        }
+    }
+}
