@@ -1,0 +1,24 @@
+{
+    "name": "acf/card-content-list",
+    "title": "Card Content List",
+    "description": "Theme styled Card Content List block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["card-content-list", "content", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "card-content-list.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "card-content-list/preview.jpg"
+            }
+        }
+    }
+}

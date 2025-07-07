@@ -44,7 +44,8 @@
             'team-listing',
             'coa',
             'product-listing-post',
-            'quick-links'
+            'quick-links',
+            'card-content-list'
         ];
 
         foreach($acf_blocks as $block){

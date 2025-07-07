@@ -1,0 +1,50 @@
+.card-content-list {
+    padding: 100px 0 107.5px;
+
+    &__container {
+        max-width: 1820px;
+        margin: 0 auto;
+    }
+
+        &__title {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 83.5px;
+            color: #fff;
+        }
+
+        &__list {
+            display: flex;
+            margin: 0 -16.5px;
+        }
+
+            &__item {
+                width: calc(100% / 4);
+                padding: 16.5px;
+
+                &__inner {
+                    background-color: rgba(255, 255, 255, .30);
+                    padding: 30px 35px;
+                    color: #fff;
+                    height: 100%;
+                }
+
+                &__title {
+                    font-size: 40px;
+                    font-weight: 500;
+                    line-height: 1;
+                    color: inherit;
+                    margin-bottom: 40px;
+                }
+
+                &__content {
+                    p {
+                        font-size: 30px;
+                        line-height: 40px;
+                        color: inherit;
+                    }
+                }
+            }
+}
