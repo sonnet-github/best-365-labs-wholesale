@@ -25,12 +25,14 @@
             </div>
 
             <div class="report-form__main">
-                
-                <div class="report-form__image">
-                    <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
-                </div>
 
-                <div class="report-form__form">
+                <?php if($image):?>
+                    <div class="report-form__image">
+                        <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
+                    </div>
+                <?php endif;?>
+
+                <div class="report-form__form <?= $image ? 'has-img' : ''?>">
                     <div class="report-form__form-wrapper">
                         <?= $formReport ?>
 
