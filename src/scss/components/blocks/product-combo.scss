@@ -1,6 +1,10 @@
 .product-combo {
     padding: 90px 20px 102px;
 
+    @media (max-width: $bp_tabletLandscape) {
+        padding: 60px 20px;
+    }
+
     &__container {
         max-width: 1600px;
         margin: 0 auto;
@@ -12,15 +16,46 @@
             line-height: 1;
             color: getColor(2);
             margin-bottom: 94px;
+
+            @media (max-width: $bp_desktopMedium) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 28px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
         }
 
         &__list {
             display: flex;
             margin: 0 -25px;
+
+            @media (max-width: $bp_tabletLandscape) {
+                display: block;
+                margin: 0;
+            }
         }
 
             &__item {
                 width: calc(100% / 3);
                 padding: 0 25px;
+
+                @media (max-width: $bp_tabletLandscape) {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0 auto 50px;
+                    max-width: 350px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
+
+                &__product {
+                    height: 100%;
+                }
 }

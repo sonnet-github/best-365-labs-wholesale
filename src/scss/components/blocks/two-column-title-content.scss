@@ -10,11 +10,30 @@
             border-top: 2px solid #E5E5E5;
             padding: 97px 0 53px;
             display: flex;
+
+            @media (max-width: $bp_desktopMedium) {
+                padding: 65px 0;
+            }
+
+            @media (max-width: $bp_tabletLandscape) {
+                padding: 40px 0;
+                display: block;
+            }
         }
 
             &__left {
                 width: 33.40%;
                 padding: 0 100px;
+
+                @media (max-width: $bp_desktopMedium) {
+                    padding: 0 45px;
+                }
+
+                @media (max-width: $bp_tabletLandscape) {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 30px;
+                }
             }
 
                 &__title {
@@ -22,14 +41,26 @@
                     line-height: 45px;
                     font-weight: 500;
                     color: getColor(2);
+
+                    @media (max-width: $bp_desktopMedium) {
+                        font-size: 24px;
+                    }
                 }
 
             &__right {
                 width: 66.60%;
+
+                @media (max-width: $bp_tabletLandscape) {
+                   width: 100%;
+                }
             }
 
                 &__content {
                     min-height: 270px;
+
+                    @media (max-width: $bp_desktopMedium) {
+                        min-height: unset;
+                    }
 
                     p {
                         font-size: 25px;
@@ -37,6 +68,10 @@
                         font-weight: 500;
                         color: inherit;
 
+                        @media (max-width: $bp_desktopMedium) {
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
                     }
 
                     p, li {
@@ -50,6 +85,14 @@
                     ul,
                     ol {
                         padding-left: 0;
+
+                        li {
+                           @media (max-width: $bp_desktopMedium) {
+                                font-size: 18px;
+                                line-height: 30px;
+                            }
+                        }
+                        
                     }
 
                     strong {

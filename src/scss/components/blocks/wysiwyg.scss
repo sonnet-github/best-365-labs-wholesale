@@ -357,15 +357,34 @@
         margin: 0 auto;
         padding: 68px 14% 0;
 
+        @media (max-width: $bp_tabletLandscape) {
+            padding: 30px 0 0;
+        }
+
         h2 {
             font-size: 50px;
             line-height: 65px;
+
+            @media (max-width: $bp_desktopMedium) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 28px;
+                line-height: 30px;
+            }
         }
 
         p {
             font-size: 25px;
             line-height: 40px;
             margin-bottom: 50px;
+
+            @media (max-width: $bp_desktopMedium) {
+                font-size: 20px;
+                line-height: 25px;
+            }
         }
 
         *:last-child {
@@ -376,6 +395,10 @@
 
 .home-wysiwyg-2 {
     padding: 100px 0;
+
+    @media (max-width: $bp_tabletLandscape) {
+        padding: 50px 0;
+    }
 
     .wysiwyg__content {
         max-width: 1344px;
@@ -389,6 +412,11 @@
             font-size: 35px;
             line-height: 55px;
             font-weight: 500;
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 30px;
+                line-height: 40px;
+            }
         }
     }
 }

@@ -1,6 +1,14 @@
 .quick-links {
     padding: 40px 20px 80px;
 
+    @media (max-width: $bp_desktopSmall) {
+       padding: 30px 20px;
+    }
+
+    @media (max-width: $bp_tabletLandscape) {
+        padding: 70px 20px 30px;
+    }
+
     &__container {
         max-width: 1820px;
         margin: 0 auto;
@@ -12,16 +20,41 @@
             font-size: 35px;
             font-weight: 400;
             margin-bottom: 42px;
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 28px;
+            }
         }
 
         &__list {
             display: flex;
             margin: 0 -14px;
+
+            @media (max-width: $bp_tabletLandscape) {
+                margin: 0;
+                flex-wrap: wrap;
+            }
+
+            @media (max-width: $bp_mobileLandscape) {
+                margin: 0;
+            }
         }
 
             &__item {
                 width: calc(100% / 6);
                 padding: 14px;
+
+                @media (max-width: $bp_tabletLandscape) {
+                    width: calc(100% / 3);
+                }
+
+                @media (max-width: $bp_mobileLandscape) {
+                    width: 50%;
+                }
+
+                @media (max-width: $bp_mobileMedium) {
+                    width: 100%;
+                }
 
                 a {
                     display: block;
@@ -32,6 +65,10 @@
                     text-decoration: none;
                     height: 100%;
                     transition: background-color .3s ease, border-color .3s ease;
+
+                    @media (min-width: 1025px) and (max-width: $bp_desktopSmall) {
+                        padding: 8px;  
+                    }
 
                     &:hover {
                         background-color: getColor(2);
@@ -45,6 +82,16 @@
                        line-height: 30px; 
                        color: getColor(2);
                        transition: color .3s ease;
+
+                        @media (max-width: $bp_desktopMedium) {
+                            font-size: 20px;
+                            line-height: 25px;
+                        }
+
+                        @media (min-width: 1025px) and (max-width: $bp_desktopSmall) {
+                            font-size: 14px;
+                            line-height: 17px; 
+                        }
                     }
 
                     a:hover h3 {
@@ -55,6 +102,16 @@
                         font-size: 18px;
                         font-weight: 400;
                         line-height: 30px;
+
+                        @media (max-width: $bp_desktopMedium) {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+
+                        @media (min-width: 1025px) and (max-width: $bp_desktopSmall) {
+                            font-size: 12px;
+                            line-height: 19px;
+                        }
 
                         &, & * {
                            transition: color .3s ease;

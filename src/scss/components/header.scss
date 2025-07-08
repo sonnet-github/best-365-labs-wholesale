@@ -12,6 +12,11 @@
     position: relative;
     padding: 35px 48px 15px 50px;
 
+    @media (max-width: $bp_mobileMenuShift) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     a.subscription{
         position: absolute;
         right: 48px;
@@ -66,7 +71,7 @@
         padding: 63px 0;
         position: fixed;
         width: 100%;
-        top: 112px;
+        top: 117px;
         left: 0;
         z-index: 2;
         display: none;
@@ -218,6 +223,14 @@
     &__menu{
         width: 77.51%;
 
+        @media (max-width: $bp_desktop) {
+            padding-left: 40px;
+        }
+
+        @media (max-width: $bp_desktopSmall) {
+            padding-left: 14px;    
+        }
+
         ul{
             list-style: none;
             padding: 0;
@@ -227,6 +240,18 @@
             li{
                 margin-right: 35px;
                 position: relative;
+
+                @media (max-width: $bp_desktop) {
+                    margin-right: 22px;
+                }
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    margin-right: 12px;
+                }
+
+                @media (max-width: $bp_desktopSmall) {
+
+                }
 
                 &.current-menu-parent{
                     & > a{
@@ -253,6 +278,14 @@
                     letter-spacing: 0.10px;
                     text-decoration: none;
                     font-weight: 500;
+
+                    @media (max-width: $bp_desktop) {
+                       font-size: 18px;
+                    }
+
+                    @media (max-width: $bp_mobileMenuShift) {
+                        font-size: 15px;
+                    }
                 }
 
                 ul.sub-menu{
@@ -286,13 +319,31 @@
     &__logo{
         width: 22.49%;
 
+        @media (max-width: $bp_tabletLandscape) {
+            width: auto;
+        }
+
         img{
             max-width: 100%;
             height: auto;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                width: 100%;
+                max-width: 200px;
+            }
         }
     }
 
     &__panel {
+        position: absolute;
+        top: 10px;
+        right: 58px;
+        pointer-events: none;
+        z-index: 2;
+
+        @media (max-width: $bp_tabletLandscape) {
+            display: none;
+        }
 
         ul {
             text-align: right;
@@ -305,8 +356,12 @@
                 vertical-align: middle;
                 margin-right: 45px;
 
+                @media (max-width: $bp_desktop) {
+                    margin-right: 10px;
+                }
+
                 &:last-child {
-                    margin-right: 0;
+                    margin-right: 0 !important;
                 }
             }
 
@@ -317,9 +372,22 @@
                     display: flex;
                     align-items: center;
 
+                    @media (max-width: $bp_desktop) {
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: $bp_mobileMenuShift) {
+                        font-size: 15px;
+                    }
+
                     img {
                         display: inline-block;
                         margin-right: 10px;
+                        height: auto;
+
+                        @media (max-width: $bp_mobileMenuShift) {
+                           max-width: 22px;
+                        }
                     }
                 }
 
@@ -545,6 +613,10 @@
             letter-spacing: 0.24px;
             color: #FFFFFF;
             font-weight: 500;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                font-size: 15px;
+            }
         }
     }
 

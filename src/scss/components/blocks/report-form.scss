@@ -13,6 +13,11 @@
             color: getColor(2);
             font-weight: 400;
             margin-bottom: 30px;
+
+            @media (max-width: $bp_desktopMedium) {
+                font-size: 40px;
+                line-height: 45px;
+            }
         }
 
         p {
@@ -20,6 +25,11 @@
             line-height: 40px;
             color: getColor(2);
             font-weight: 500;
+
+            @media (max-width: $bp_desktopMedium) {
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
     }
 
@@ -103,6 +113,11 @@
                     margin: 0 auto !important;
                     display: block;
                     transition: all 0.3s ease-in-out;
+
+                    @media (max-width: $bp_desktopMedium) {
+                        font-size: 20px !important;
+                        height: 45px !important;
+                    }
 
                     &:hover{
                         box-shadow: none !important;
