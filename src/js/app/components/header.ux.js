@@ -40,6 +40,7 @@ class HeaderUX {
         this.loginShuffle();
         this.megaMenu();
         this.radioClick();
+        this.customSubmenu();
 
         $(window).resize(() => {
             this.adjustNav();
@@ -77,21 +78,99 @@ class HeaderUX {
         if ($pre.length) syncActive($pre);
     }
 
-    megaMenu() {
-        var $shop = $('#menu-item-23103 , #menu-item-1162'),
-        $mega = $('.header__mega-menu');
-  
-        $shop.hover(
-        function() { $mega.stop(true,true).slideDown(200); },
-        function() { $mega.stop(true,true).slideUp(200); }
+    customSubmenu() {
+
+        const menuItems = $('#main-menu > .menu-item-has-children:not(.has-mega-menu)');
+        const submenus = $('#main-menu > .menu-item-has-children:not(.has-mega-menu) > .sub-menu');
+
+        menuItems.hover(
+            function() {
+
+                $(this).find('> ul.sub-menu').stop(true,true).slideDown(200);
+                console.log($(this).find('> ul.sub-menu'));
+            },
+            function() {
+
+                $(this).find('> ul.sub-menu').stop(true,true).slideUp(400);
+            }
         );
-    
-        // keep it open if you hover over the panel itself
-        $mega.hover(
-        function() { $mega.stop(true,true).show(); },
-        function() { $mega.stop(true,true).slideUp(400); }
-        );
+
+        // submenus.hover(
+        //     function() {
+
+        //     },
+        //     function() {},
+        // );
     }
+
+    megaMenu() {
+        const megaMenuTrigger = $('.header .has-mega-menu');
+        const megaMenuItems = $('.header__mega-menu');
+        let activeMenuId = null;
+
+        megaMenuTrigger.each(function() {
+            const menuItem = $(this);
+            const classes = menuItem.attr('class');
+
+            menuItem.hover(
+                function() {
+                    
+                    //check if one of the mega menu has the same id
+                    megaMenuItems.each(function() {
+                        const megaMenuId = $(this).attr('data-id');
+                        
+                        if(classes.indexOf(megaMenuId) > -1) {
+
+                            $('.header__mega-menu[data-id="'+ megaMenuId +'"]').stop(true,true).slideDown(200);
+                            
+                            activeMenuId = megaMenuId;
+                        }
+                    });
+                },
+                function() {
+                    
+                    megaMenuItems.slideUp(200);
+
+                }
+            );
+            
+        });
+
+
+        megaMenuItems.each(function() {
+            const megaMenu = $(this);
+
+            megaMenu.hover(
+                function() {
+                    
+                    $('.header__mega-menu[data-id="'+ activeMenuId +'"]').stop(true,true).show();
+
+                },
+                function() {
+
+                    megaMenuItems.slideUp(400);
+                    activeMenuId = null;
+                }
+            );
+        });
+  
+    }
+
+    // megaMenu() {
+    //     var $shop = $('#menu-item-23103 , #menu-item-1162'),
+    //     $mega = $('.header__mega-menu');
+  
+    //     $shop.hover(
+    //     function() { $mega.stop(true,true).slideDown(200); },
+    //     function() { $mega.stop(true,true).slideUp(200); }
+    //     );
+    
+    //     // keep it open if you hover over the panel itself
+    //     $mega.hover(
+    //     function() { $mega.stop(true,true).show(); },
+    //     function() { $mega.stop(true,true).slideUp(400); }
+    //     );
+    // }
 
     loginShuffle(){
         const $singleLoginForm = $('#singleLogin');
