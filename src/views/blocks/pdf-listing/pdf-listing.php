@@ -58,8 +58,8 @@ else :
                                     <img src="<?php echo $thumbnail['url'];?>" alt="<?php echo $thumbnail['alt'];?>">
                                 </a>
                             </div>
-                                <p><?php echo $name;?></p>
-                                <a target="_blank" class="button button--ghost" href="<?php echo $link; ?>">Download</a>
+                                <h3><?php echo $name;?></h3>
+                                <a target="_blank" class="button button--primary" href="<?php echo $link; ?>">Download</a>
                             
                     
                         </div>
