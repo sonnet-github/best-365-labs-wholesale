@@ -178,6 +178,11 @@ $mega_menu_list = get_field('mega_menu_list', 'option');
 </section>
 
 <div class="header-sidemenu">
+
+    <button class="header-sidemenu__close" aria-label="Close">
+        <svg class="lucide lucide-x-icon lucide-x" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+
     <div class="header-sidemenu__container">
     
     <div class="header-sidemenu__medical-login">

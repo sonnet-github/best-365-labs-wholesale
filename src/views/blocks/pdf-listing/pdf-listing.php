@@ -16,6 +16,7 @@ if ( ! empty( $block['anchor'] ) ) {
 // Get ACF fields value and set default
 $section_title = get_field('section_title');
 $column = get_field('listing');
+$page_title = get_field('page_title');
 
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'block--custom-layout__pdf-listing';
@@ -31,7 +32,13 @@ if(get_field('preview_image')) :
 else :
 ?>
 
-<div class="pdf-listing <?= esc_attr($class_name) ?>" <?= $anchor ?>>
+<div class="pdf-listing <?= esc_attr($class_name) ?> <?= $page_title ? 'has-page-title' : ''?>" <?= $anchor ?>>
+
+    <?php if($page_title):?>
+        <div class="pdf-listing__page-title">
+            <h1><?= $page_title?></h1>
+        </div>
+    <?php endif;?>
     
         <div class="pdf-listing__title">
             <?= $section_title ?>

@@ -47,7 +47,9 @@
             'quick-links',
             'card-content-list',
             'product-combo',
-            'two-column-title-content'
+            'two-column-title-content',
+            'team-list',
+            'video-list'
         ];
 
         foreach($acf_blocks as $block){

@@ -13,8 +13,12 @@
         cursor: pointer;
         height: 60px;
         transition: all 0.3s ease;
+        
+        // @media (max-width: $bp_desktop) {
 
-        @media (max-width: $bp_desktopMedium) {
+        // }
+
+        @media (max-width: $bp_desktop) {
             font-size: 20px;
             height: 45px;
             padding: 0 30px;

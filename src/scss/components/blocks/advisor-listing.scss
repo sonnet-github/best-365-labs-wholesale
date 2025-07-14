@@ -1,21 +1,22 @@
 .advisor-listing{
-    padding: 50px 0;
+    padding: 100px 0 65px;
 
     &__container{
-        max-width: 1020px;
+        max-width: 1765px;
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
     }
 
     &__title{
-        padding-bottom: 50px;
+        padding-bottom: 89px;
        
 
         h1{
-            font-size: 40px;
-            line-height: 56px;
-            color: #4275ae;
+            font-size: 50px;
+            line-height: 1;
+            color: getColor(2);
+            text-align: center;
         }
     }
 
@@ -25,10 +26,8 @@
     }
 
     &__column{
-        margin-bottom: 45px;
-        border-top: 1px solid #4275ae;
-        padding-top: 40px;
-        padding-left: 40px;
+        border-top: 2px solid getColor(3);
+        padding: 100px 0 35px;
     }
 
     &__inner{
@@ -36,58 +35,90 @@
     }
 
     &__thumbnail{
-        max-width: 273px;
-        width: 100%;
+       width: 29.21%;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__content{
-        flex: 1;
-        padding-left: 25px;
+        width: 70.79%;
+        padding-left: 85px;
 
-        &-text{
-            margin-bottom: 45px;
+        @media (max-width: $bp_mobileMenuShift) {
+            padding-left: 35px;
         }
 
-        h3{
-            font-size: 30px;
-            line-height: 42px;
-            color: #4275ae;
-            margin-bottom: 10px;
+        h2{
+            color: getColor(2);
+            margin-bottom: 40px;
         }
 
         p{
-            font-size: 16px;
-            line-height: 22px;
-            color: #221f20;
+            font-size: 25px;
+            line-height: 35px;
             margin-bottom: 20px;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                font-size: 20px;
+                line-height: 29px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
+    }
+
+    &__post {
+        margin-top: 95px;
     }
 
     &__post-row{
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -10px;
+        margin: 0 -20px;
+
+        @media screen and (max-width: 480px) {
+           margin: 0;
+           display: block;
+        }
     }
 
     &__post-column{
-        padding:0 10px 10px;
+        padding: 0 20px;
+        width: calc(100% / 4);
+        margin-bottom: 50px;
+
+         @media screen and (max-width: $bp_tabletLandscape) {
+            width: 50%;
+         }
+
+         @media screen and (max-width: 480px) {
+            width: 100%;
+            padding: 0;
+         }
     }
 
     &__post-inner{
         position: relative;
-        max-width: 194px;
-        height: 194px;
-        width: 100%;
     }
 
     &__image{
         position: relative;
-        height: 100%;
-        width: 100%;
+        display: block;
+
+        canvas {
+            display: block;
+            width: 100%;
+        }
 
         img{
-            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -106,36 +137,18 @@
     }
 
     &__post-content{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        padding: 27px 10px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        a{
-            font-size: 12px;
-            color: #fff;
-            text-decoration: none;
-
-            &:hover{
-                color: #46abd3;
-            }
-        }
+        margin-top: 20px;
 
         a.title{
-            font-size: 20px;
-            color: #fff;
+            font-size: 25px;
+            line-height: 35px;
+            color: getColor(2);
             text-decoration: none;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            display: -webkit-box;
-            overflow: hidden;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                font-size: 20px;
+                line-height: 25px;
+            }
 
             &:hover{
                 color: #46abd3;
@@ -143,7 +156,52 @@
         }
     }
 
-    @media screen and (max-width: 768px){
+    &__embeds {
+        padding-top: 95px;
+        margin: 0 -17.5px;
+        display: flex;
+
+        @media (max-width: 480px) {
+            display: block;
+            margin: 0;
+        }
+
+        &__item {
+            padding: 0 17.5px;
+            width: 50%;
+
+            @media (max-width: 480px) {
+                width: 100%;
+                padding: 17.5px 0;
+            }
+        }
+
+        &__embed {
+            position: relative;
+            padding-top: 56.2%;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__embed-title {
+            padding-top: 20px;
+
+            h3 {
+                font-size: 25px;
+                color: getColor(2);
+                line-height: 35px;
+            }
+            
+        }
+    }
+
+    @media screen and (max-width: $bp_tabletLandscape) {
         padding: 35px 0;
 
         &__title{
@@ -168,29 +226,35 @@
         }
 
         &__thumbnail{
-            max-width: 100%;
-            margin-bottom: 10px;
+           width: 100%;
+           margin-bottom: 30px;
+
+           img {
+                max-width: 350px;
+                margin: 0 auto;
+                display: block;
+           }
         }
 
         &__content{
             max-width: 100%;
+            width: 100%;
+
+            &-text {
+
+                h2 {
+                    text-align: center;
+                }
+            }
         }
         
     }
 
     @media screen and (max-width : 480px){
-        &__post-inner{
-            max-width: 100%;
-            height: 280px;
-        }
 
         &__post-column{
             max-width: 100%;
             width: 100%;
-        }
-
-        &__post-content{
-            padding: 30px;
         }
     }
 }

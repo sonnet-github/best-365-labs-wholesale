@@ -1,0 +1,24 @@
+{
+    "name": "acf/video-list",
+    "title": "Video List",
+    "description": "Theme styled Video List block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["video-list", "video", "list"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "video-list.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "video-list/preview.jpg"
+            }
+        }
+    }
+}

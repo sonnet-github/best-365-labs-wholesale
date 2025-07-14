@@ -81,6 +81,10 @@ ol{
 h2 {
     font-size: 50px;
     line-height: 1;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        font-size: 35px;
+    }
 }
 
 h3 {

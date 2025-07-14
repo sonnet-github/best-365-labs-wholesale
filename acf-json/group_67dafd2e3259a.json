@@ -3,6 +3,27 @@
     "title": "PDF Listing",
     "fields": [
         {
+            "key": "field_686f401b77084",
+            "label": "Page Title",
+            "name": "page_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67dafd2e3acb9",
             "label": "Section Title",
             "name": "section_title",
@@ -137,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751683879
+    "modified": 1752121389
 }

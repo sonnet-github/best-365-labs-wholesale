@@ -400,6 +400,12 @@ class HeaderUX {
             $('.header-sidemenu').toggleClass('active');
             $('body').toggleClass('no-scroll');
         });
+
+        $('.header-sidemenu__close').on('click', function() {
+            $('#burgerMain').removeClass('is-active');
+            $('.header-sidemenu').removeClass('active');
+             $('body').removeClass('no-scroll');
+        });
     }
 
     adjustNav() {

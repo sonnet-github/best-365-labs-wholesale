@@ -49,8 +49,8 @@ else :
                     
                         $thumbnail = get_sub_field('featured_image');
                         $featuredPost = get_sub_field('featured_post');
-                        $content = get_sub_field('content')
-
+                        $content = get_sub_field('content');
+                        $video_embeds = get_sub_field('video_embeds');
                     
                     ?>
                 
@@ -68,58 +68,77 @@ else :
                                     <?php echo $content;?>
                                 </div>
 
-                                <div class="advisor-listing__post">
-
-                                    <div class="advisor-listing__post-row">
-                                <?php 
-                                    if ( $featuredPost ) : 
-                                        foreach ( $featuredPost as $post ) :
-                                            setup_postdata( $post );
-                                            $title       = get_the_title( $post->ID);  
-                                            $featuredImg = get_the_post_thumbnail( $post->ID, 'medium' );
-                                            $link        = get_the_permalink( $post->ID );
-
-                                              // Get author info
-                                            $author_id   = get_post_field( 'post_author', $post->ID );
-                                            $author_name = get_the_author_meta( 'display_name', $author_id );
-                                            $author_link = get_author_posts_url( $author_id );
-                                ?>
-
-                                <div class="advisor-listing__post-column">
-
-                                    <div class="advisor-listing__post-inner">
-
-                                        <div class="advisor-listing__image">
-                                            <?php echo $featuredImg; ?>
-                                        </div>
-
-                                        <div class="advisor-listing__post-content">
-                                            <a href="<?php echo esc_url( $author_link ); ?>">
-                                                <?php echo esc_html( $author_name ); ?>
-                                            </a>
-
-                                            <a class="title" href="<?php echo $link;?>">
-                                                <?php echo $title;?>
-                                            </a>
-                                        </div>
-
+                                <?php if($video_embeds):?>
+                                    <div class="advisor-listing__embeds">
+                                        <?php foreach($video_embeds as $item):?>
+                                            <?php if($item):?>
+                                                <div class="advisor-listing__embeds__item">
+                                                    <div class="advisor-listing__embeds__embed">
+                                                        <?= $item['embed']?>
+                                                    </div>
+                                                    <?php if($item['title']):?>
+                                                        <div class="advisor-listing__embeds__embed-title">
+                                                            <h3><?= $item['title']?></h3>
+                                                        </div>
+                                                    <?php endif;?>
+                                                </div>
+                                            <?php endif;?>
+                                        <?php endforeach;?>
                                     </div>
-
-                                </div>
-
-                            
-                                <?php 
-                                    endforeach; 
-                                        wp_reset_postdata(); // Reset post data after the loop
-                                    endif; 
-                                ?>
-
-                                    </div>
-                                </div>
+                                <?php endif;?>
                             </div>
                                
                         
                         </div>
+
+                        <?php if($featuredPost):?>
+                            <div class="advisor-listing__post">
+
+                                <div class="advisor-listing__post-row">
+                                    <?php 
+                                        if ( $featuredPost ) : 
+                                            foreach ( $featuredPost as $post ) :
+                                                setup_postdata( $post );
+                                                $title       = get_the_title( $post->ID);  
+                                                $featuredImg = get_the_post_thumbnail( $post->ID, 'medium' );
+                                                $link        = get_the_permalink( $post->ID );
+
+                                                // Get author info
+                                                $author_id   = get_post_field( 'post_author', $post->ID );
+                                                $author_name = get_the_author_meta( 'display_name', $author_id );
+                                                $author_link = get_author_posts_url( $author_id );
+                                    ?>
+
+                                        <div class="advisor-listing__post-column">
+
+                                            <div class="advisor-listing__post-inner">
+
+                                                <a href="<?php echo $link;?>" class="advisor-listing__image">
+                                                    <canvas width="400" height="240"></canvas>
+                                                    <?php echo $featuredImg; ?>
+                                                </a>
+
+                                                <div class="advisor-listing__post-content">
+                                                    <a class="title" href="<?php echo $link;?>">
+                                                        <?php echo $title;?>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                        
+                                    <?php 
+                                        endforeach; 
+                                            wp_reset_postdata(); // Reset post data after the loop
+                                        endif; 
+                                    ?>
+
+                                </div>
+                                
+                            </div>
+                        <?php endif;?>
                     </div>
                 
                     <?php endwhile; ?>

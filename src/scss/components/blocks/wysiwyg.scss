@@ -1,4 +1,4 @@
-.wysiwyg{
+.wysiwyg {
     padding: 66px 0 62px;
     background-color: #F2F2F2;
 
@@ -109,6 +109,77 @@
     }
 }
 
+.wysiwyg.coa-content {
+    color: getColor(2);
+    text-align: center;
+    padding: 0 0 150px;
+    background-color: transparent;
+
+    @media (max-width: $bp_tabletLandscape) {
+        padding-bottom: 50px;
+    }
+
+    .wysiwyg__content {
+        max-width: 1720px;
+        margin: 0 auto;
+        border-top: 2px solid getColor(3);
+        padding-top: 100px;
+
+        @media (max-width: $bp_tabletLandscape) {
+            padding-top: 50px;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 65px;
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 30px;
+                line-height: 50px;
+            }
+
+            @media (max-width: $bp_mobileLandscape) {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+
+        h2, ul {
+            margin-bottom: 50px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            
+            li {
+                text-align: center;
+                font-size: 30px;
+                line-height: 50px;
+                color: inherit;
+
+                @media (max-width: $bp_tabletLandscape) {
+                    font-size: 24px;
+                    line-height: 13px;
+                }
+
+                @media (max-width: $bp_mobileLandscape) {
+                    font-size: 18px;
+                    line-height: 1;
+                    margin-bottom: 14px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
 
 .wysiwyg-inner-page{
     padding: 64px 0 54px;
@@ -414,9 +485,48 @@
             font-weight: 500;
 
             @media (max-width: $bp_tabletLandscape) {
-                font-size: 30px;
-                line-height: 40px;
+                font-size: 20px;
+                line-height: 33px;
             }
+        }
+    }
+}
+
+.white-papers-content {
+    .wysiwyg-inner-page__container {
+        max-width: 1860px;
+    }
+
+    .wysiwyg-inner-page__content {
+        border-top: 2px solid getColor(3);
+        padding-top: 92px;
+    }
+
+    .wysiwyg-inner-page__content h2 {
+        text-align: center;
+        margin-bottom: 90px;
+        line-height: 1;
+
+        @media (min-width: 1441px) {
+            font-size: 50px;
+        }
+    }
+
+    .wysiwyg-inner-page__content h5 {
+        font-weight: 500;
+        margin-top: 80px;
+
+        @media (min-width: 1441px) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    .wysiwyg-inner-page__content p {
+
+        @media (min-width: 1441px) {
+             font-size: 25px;
+            line-height: 30px;
         }
     }
 }

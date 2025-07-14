@@ -157,95 +157,6 @@
             ]
         },
         {
-            "key": "field_680df8de053f6",
-            "label": "Mega Menu",
-            "name": "mega_menu",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_680df8ff053f7",
-                    "label": "Heading",
-                    "name": "heading",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_680df8de053f6"
-                },
-                {
-                    "key": "field_680df920053f8",
-                    "label": "Menu Link",
-                    "name": "menu_link",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Row",
-                    "rows_per_page": 20,
-                    "parent_repeater": "field_680df8de053f6",
-                    "sub_fields": [
-                        {
-                            "key": "field_680df92b053f9",
-                            "label": "Link",
-                            "name": "link",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "allow_in_bindings": 0,
-                            "parent_repeater": "field_680df920053f8"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "key": "field_67e03b8012d56",
             "label": "Rotating Announcement",
             "name": "announcement",
@@ -694,5 +605,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751939823
+    "modified": 1752030213
 }

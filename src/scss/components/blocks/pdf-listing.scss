@@ -2,12 +2,55 @@
     padding: 90px 0 67px;
     overflow: hidden;
 
+    &__page-title{
+        margin-bottom: 100px;
+        position: relative;
+        padding: 0 20px;
+
+        @media (max-width: $bp_tabletLandscape) {
+            margin-bottom: 40px;
+        }
+        
+
+         h1 {
+            text-align: center;
+            font-size: 50px;
+            line-height: 65px;
+            color: getColor(2);
+            padding-bottom: 88px;
+            max-width: 1720px;
+            margin: 0 auto;
+            position: relative;
+            border-bottom: 2px solid  getColor(3);
+
+            @media (max-width: $bp_tabletLandscape) {
+                font-size: 38px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
     &__title{
          margin-bottom: 90px;
+         padding: 0 20px;
 
         h2{
             color: getColor(2);
             text-align: center;
+        }
+    }
+
+    &.coa-layout .pdf-listing__title {
+        margin-bottom: 115px;
+
+        h2 {
+            font-size: 30px;
+            line-height: 50px;
+
+            @media (max-width: $bp_mobileLandscape) {
+                font-size: 24px;
+                line-height: 34px;
+            }
         }
     }
 
@@ -116,6 +159,11 @@
                 font-size: 20px;
                 line-height: 29px;
             }
+
+            @media (min-width: 1025px) and (max-width: $bp_desktopSmall) {
+                font-size: 15px;
+                line-height: 25px;
+            }
         }
 
         a.button{
@@ -133,6 +181,47 @@
             @media (max-width: $bp_desktopMedium) {
                 font-size: 20px;
                 height: 40px;
+            }
+        }
+    }
+
+    &.white-paper-listing .pdf-listing__inner {
+
+        @media (min-width: 1441px) {
+            height: 670px;
+        }
+    }
+
+    &.coa-layout {
+        .pdf-listing__inner {
+            height: 580px;
+
+            @media (max-width: $bp_desktopLarge) {
+                height: 440px;
+            }
+
+            @media (max-width: $bp_desktopMedium) {
+                height: 322px;
+            }
+
+            h3 {
+                @media (min-width: 1701px) {
+                    font-size: 35px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .pdf-listing__thumbnail {
+            img {
+                @media (max-width: $bp_desktopLarge) {
+                    height: 260px;
+                }
+
+                @media (max-width: $bp_desktopMedium) {
+                    height: 180px;
+                    object-fit: contain;
+                }
             }
         }
     }
