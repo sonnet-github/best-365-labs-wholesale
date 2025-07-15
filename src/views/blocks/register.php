@@ -49,7 +49,8 @@
             'product-combo',
             'two-column-title-content',
             'team-list',
-            'video-list'
+            'video-list',
+            'text-slider-banner'
         ];
 
         foreach($acf_blocks as $block){

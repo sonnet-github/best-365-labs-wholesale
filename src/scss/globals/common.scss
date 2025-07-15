@@ -78,7 +78,7 @@ ol{
     padding-left: 15px;
 }
 
-h2 {
+h2, h1 {
     font-size: 50px;
     line-height: 1;
 
@@ -205,6 +205,38 @@ h3 {
 
 .bg-secondary {
     background-color: getColor(3) !important;
+}
+
+.site-prev-btn,
+.site-next-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 21px;
+    height: 39px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.site-prev-btn {
+    background-image: url('../assets/images/icon-prev.png');
+}
+
+.site-next-btn {
+    background-image: url('../assets/images/icon-next.png');
+}
+
+.hidden {
+    display: none !important;
 }
 
 @media (orientation: portrait) {

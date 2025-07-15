@@ -13,6 +13,7 @@ class sliderUX {
         let $testimonialSlider = $('.testimonial-slider__row');
         let $announceSlider = $('.announcement__list');
         let $videoSlider = $('.video-slider__row');
+        let $bannerTextSlider = $('.text-banner-slider__slider');
 
         const thumbCount = $('.slider-thumbs .slick-slide, .slider-thumbs > div').length;
         const thumbsToShow = Math.min(thumbCount, 4); // Max 4 thumbnails
@@ -93,6 +94,18 @@ class sliderUX {
             cssEase: 'ease',
             fade: true,
             dots: false,   
+        });
+
+        $bannerTextSlider.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:  true,
+            dots: true,
+            autoplaySpeed: 1000,
+            speed: 1000,
+            prevArrow: '<button class="site-prev-btn text-banner-slider__prev"><span class="hidden">Prev</span></button>',
+            nextArrow: '<button class="site-next-btn text-banner-slider__next"><span class="hidden">Next</span></button>'
         });
 
 
