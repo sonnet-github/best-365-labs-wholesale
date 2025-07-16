@@ -50,7 +50,8 @@
             'two-column-title-content',
             'team-list',
             'video-list',
-            'text-slider-banner'
+            'text-slider-banner',
+            'shipping-addresses'
         ];
 
         foreach($acf_blocks as $block){

@@ -27,6 +27,14 @@
                     top: calc(50% - 50px);
                     transform: translateY(-50%);
                     z-index: 5;
+
+                    @media (max-width: $bp_tabletLandscape ) {
+                       top: calc(50% - 20px);
+                    }
+
+                    @media (max-width: 480px) {
+                        display: none !important;
+                    }
                 }
 
                 &__prev {
@@ -42,6 +50,10 @@
                     bottom: unset;
                     padding-top: 60px;
 
+                    @media (max-width: $bp_tabletLandscape ) {
+                       padding-top: 20px;
+                    }
+
                     li {
                         width: 18px;
                         height: 18px;
@@ -50,6 +62,12 @@
                         cursor: pointer;
                         margin: 0 23px 0 0;
                         transition: background-color .3s ease, border-color .3s ease;
+
+                        @media (max-width: $bp_mobileMenuShift) {
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 15px;
+                        }
 
                         &:last-child {
                             margin-right: 0;
@@ -65,7 +83,7 @@
                     }
                 }
 
-                .slick-slide {
+                .slick-initialized .slick-slide {
                     display: block;
                 }
 
@@ -74,10 +92,19 @@
                         color: #fff;
                     }
 
+                    .text-banner-slider__slider:not(.slick-initialized) {
+                        display: none !important;
+                    }
+
                         &__slide-title {
                             font-size: 35px;
                             line-height: 1;
                             margin-bottom: 32px;
+                            
+                            @media (max-width: $bp_tabletLandscape ) {
+                                font-size: 28px;
+                                margin-bottom: 12px;
+                            }
                         }
 
                         &__content {
@@ -86,6 +113,11 @@
                                 color: inherit;
                                 font-size: 25px;
                                 line-height: 30px;
+
+                                @media (max-width: $bp_tabletLandscape ) {
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                }
                             }
                         }
 }

@@ -26,7 +26,7 @@ class sliderUX {
             swipe: false,             
             touchMove: false,          
             draggable: false,   
-            asNavFor: '.custom-single-product__gallery-thumbnail, .custom-single-product__gallery-popup',
+            asNavFor: '.custom-single-product__gallery-thumbnail',
             responsive: [
                 {
                     breakpoint: 769, 
@@ -38,9 +38,9 @@ class sliderUX {
         });
     
         $('.custom-single-product__gallery-thumbnail').slick({
-            slidesToShow: 8,
+            slidesToShow: 6,
             slidesToScroll: 1,
-            asNavFor: '.custom-single-product__gallery-main, .custom-single-product__gallery-popup',
+            asNavFor: '.custom-single-product__gallery-main',
             focusOnSelect: true,
             arrows: false,
             dots: false,

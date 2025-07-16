@@ -200,19 +200,19 @@
     }
     
     &__cart{
-        margin-left: 10px;
-        width: 25px;
         position: relative;
         cursor: pointer;
 
         &-wrapper{
             position: relative;
+            display: block;
         }
-        svg{
-            position: relative;
-            top: 13px;
-            width: 100%;
-        }
+
+        // svg{
+        //     position: relative;
+        //     top: 13px;
+        //     width: 100%;
+        // }
 
         .xoo-wsc-sc-subt{
             display: none;
@@ -223,9 +223,8 @@
         }
 
         &-items{
-
             position: absolute;
-            top: calc(50% + 12px);
+            top: calc(50% + 1px);
             left: calc(50% + 3px);
             transform: translate(-50%,-50%);
     
@@ -394,7 +393,6 @@
         position: absolute;
         top: 10px;
         right: 58px;
-        pointer-events: none;
         z-index: 2;
 
         @media (max-width: $bp_tabletLandscape) {
@@ -427,6 +425,7 @@
                     font-weight: 500;
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
 
                     @media (max-width: $bp_desktopLarge) {
                         font-size: 18px;
@@ -572,10 +571,22 @@
             margin: unset;
             width: 77.51%;
             padding: 0;
-            margin-left: calc(22.49% + 480px);
+            margin-left: calc(22.49% + 415px);
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: calc(22.49% + 353px);
+            }
 
             @media (max-width: $bp_desktopMedium) {
-                margin-left: 47.59%;
+                margin-left: calc(22.49% + 295px);
+            }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: calc(22.49% + 269px);
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: calc(22.49% + 256px);
             }
         }
 
@@ -587,7 +598,23 @@
             margin: unset;
             width: 77.51%;
             padding: 0;
-            margin-left: 63%;
+            margin-left: calc(22.49% + 720px);
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: calc(22.49% + 578px);
+            }
+
+            @media (max-width: $bp_desktopMedium) {
+                margin-left: calc(22.49% + 474px);
+            }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: calc(22.49% + 452px);
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: calc(22.49% + 440px);
+            }
         }
 
     }

@@ -60,10 +60,9 @@
     }
 
     &__title{
-        margin-bottom: 42px;
+        margin-bottom: 38px;
+
         h2{
-            font-size: 40px;
-            line-height: 56px;
             color: #fff;
             text-align: center;
         }
@@ -132,18 +131,18 @@
 
     &__comment{
         margin-bottom: 29px;
-        padding-top: 30px;
         p{
-            font-size: 17px;
-            line-height: 27px;
+
+            font-size: 26px;
+            line-height: 45px;
             color: #fff;
         }
     }
 
     &__client{
         p{
-            font-size: 15px;
-            line-height: 21px;
+            font-size: 26px;
+            line-height: 45px;
             color: #fff;
             font-weight: 400;
             font-style: italic;

@@ -1,0 +1,37 @@
+.shipping-addresses {
+    padding: 90px 20px;
+
+    &__container {
+        max-width: calc(100% - 100px);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        h2 {
+            color: getColor(2);
+            margin-bottom: 30px;
+        }
+
+        .button {
+            font-family: getFont(1, 2) !important;
+            background-color: getColor(2) !important;
+            color: #fff !important;
+            font-weight: 500 !important;
+            border-radius: 19px;
+            font-size: 18px !important;
+            transition: background-color .3s ease, color .3s ease;
+            margin-top: 20px;
+
+            &:hover {
+                    background: #C8C7C7 !important;
+            }
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        .select2-container .select2-selection--single {
+            height: auto;
+        }
+}
