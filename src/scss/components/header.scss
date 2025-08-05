@@ -97,14 +97,14 @@
         }
 
         &-col{
-            &:nth-child(2){
+            // &:nth-child(2){
 
-                ul{
-                    column-count: 2;
-                    column-gap: 40px;
-                }
+            //     ul{
+            //         column-count: 2;
+            //         column-gap: 40px;
+            //     }
 
-            }
+            // }
         }
 
         &-inner{
@@ -537,6 +537,38 @@
 
 .header__mega-menu {
 
+    &[data-id="menu-1"] {
+
+        .header__mega-menu-container {
+            margin: unset;
+            width: 77.51%;
+            padding: 0;
+            margin-left: 21.49%;
+            padding-left: 40px;
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: 24.49%;
+            }
+
+            // @media (max-width: $bp_desktopMedium) {
+            //     margin-left: calc(22.49% + 295px);
+            // }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: 22.49%;
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: 21.49%;
+            }
+        }
+
+        .header__mega-menu-row {
+            justify-content: flex-start;
+            column-gap: 60px;
+        }
+    }
+
     &[data-id="menu-2"] {
         .header__mega-menu-container {
             margin: unset;
@@ -549,20 +581,20 @@
             }
         }
 
-        .header__mega-menu-row {
-            justify-content: flex-start;
-            column-gap: 60px;
-        }
+        // .header__mega-menu-row {
+        //     justify-content: flex-start;
+        //     column-gap: 60px;
+        // }
 
-        .header__mega-menu-col:nth-child(1) {
-            width: 100%;
-            max-width: 323px;
-        }
+        // .header__mega-menu-col:nth-child(1) {
+        //     width: 100%;
+        //     max-width: 323px;
+        // }
 
-        .header__mega-menu-col:nth-child(2) {
-            width: 100%;
-            max-width: 542px;
-        }
+        // .header__mega-menu-col:nth-child(2) {
+        //     width: 100%;
+        //     max-width: 542px;
+        // }
     }
 
     &[data-id="menu-3"] {

@@ -15,6 +15,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 // Get ACF fields value and set default
 $section_title = get_field('section_title');
+$content = get_field('content');
 $column = get_field('listing');
 $page_title = get_field('page_title');
 
@@ -34,9 +35,16 @@ else :
 
 <div class="pdf-listing <?= esc_attr($class_name) ?> <?= $page_title ? 'has-page-title' : ''?>" <?= $anchor ?>>
 
-    <?php if($page_title):?>
-        <div class="pdf-listing__page-title">
-            <h1><?= $page_title?></h1>
+    <?php if($page_title || $content):?>
+        <div class="pdf-listing__heading">
+            <?php if($page_title):?>
+                <h1 class="pdf-listing__page-title"><?= $page_title?></h1>
+            <?php endif;?>
+            <?php if($content):?>
+                <div class="pdf-listing__content">
+                    <?= $content?>
+                </div>
+            <?php endif;?>
         </div>
     <?php endif;?>
     
