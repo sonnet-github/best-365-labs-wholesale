@@ -7,7 +7,7 @@
  * @since SDEV WP Theme 2.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js theme-html">
+<html <?php language_attributes(); ?> class="no-js theme-html <?= is_user_logged_in() ? 'is-logged-in' : ''?>">
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -309,7 +309,7 @@ class HeaderUX {
                 arrows: true,
                 prevArrow: $(".custom-single-product__popup-prev"),
                 nextArrow: $(".custom-single-product__popup-next"),
-                asNavFor: '.custom-single-product__gallery-main, .custom-single-product__gallery-thumbnail'
+                asNavFor: '.custom-single-product__gallery-thumbnail'
             });
         });
     
@@ -344,7 +344,7 @@ class HeaderUX {
     }
 
     loginPopup(){
-        $('.header__user .login').on('click' , function(e){
+        $('.header__panel .login').on('click' , function(e){
             e.preventDefault();
 
             $('.user-login').fadeIn();

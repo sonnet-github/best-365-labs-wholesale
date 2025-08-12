@@ -397,12 +397,5 @@ function update_cart_count_fragment($fragments) {
     
 
 }
-
-    
-
-    
-    
-
- 
     register_sidebar();
 ?>

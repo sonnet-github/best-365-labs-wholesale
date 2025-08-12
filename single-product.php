@@ -81,7 +81,7 @@ while (have_posts()) : the_post();
                                 if ($gallery_ids) :
                                     foreach ($gallery_ids as $attachment_id) :
                                         echo '<div class="custom-single-product__gallery-thumbnail-image">';
-                                        echo wp_get_attachment_image($attachment_id, 'thumbnail');
+                                        echo wp_get_attachment_image($attachment_id, [96, 96]);
                                         echo '</div>';
                                     endforeach;
                                 endif;
@@ -104,7 +104,7 @@ while (have_posts()) : the_post();
                                 /**
                                  * DO NOT REMOVE — this ensures WooCommerce and Subscriptions plugin work properly.
                                  */
-                                do_action('woocommerce_single_product_summary');
+                                    do_action('woocommerce_single_product_summary');
                                 ?>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ while (have_posts()) : the_post();
                 <?php if ( have_rows('testimonial_list') ) : ?>
                 <div class="custom-single-product__testimonial">
                     <div class="testimonial-slider__title">
-                        <h2>Real Result</h2>
+                        <h2>Real Results</h2>
                     </div>
         
                     <div class="testimonial-slider__container">

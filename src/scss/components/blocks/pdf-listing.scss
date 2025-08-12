@@ -1,37 +1,56 @@
 .pdf-listing {
-    padding: 90px 0 67px;
+    padding: 50px 0 67px;
     overflow: hidden;
 
-    &__page-title{
+    &__heading {
         margin-bottom: 100px;
         position: relative;
         padding: 0 20px;
+        padding-bottom: 50px;
+        max-width: 1720px;
+        margin: 0 auto 50px;
+        position: relative;
+        border-bottom: 2px solid  getColor(3);
 
         @media (max-width: $bp_tabletLandscape) {
             margin-bottom: 40px;
         }
-        
 
-         h1 {
-            text-align: center;
-            font-size: 50px;
-            line-height: 65px;
-            color: getColor(2);
-            padding-bottom: 88px;
-            max-width: 1720px;
-            margin: 0 auto;
-            position: relative;
-            border-bottom: 2px solid  getColor(3);
+        @media (max-width: $bp_tabletLandscape) {
+            padding-bottom: 40px;
+        }
+    }
 
-            @media (max-width: $bp_tabletLandscape) {
-                font-size: 38px;
-                padding-bottom: 40px;
+    &__content {
+        padding-top: 25px;
+        text-align: center;
+
+        p {
+            font-size: 25px;
+            line-height: 40px;
+            color: #221F20;
+            margin-bottom: 20px;
+            font-weight: 400;
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
 
+    &__page-title{
+        text-align: center;
+        font-size: 50px;
+        line-height: 65px;
+        color: getColor(2);
+
+        @media (max-width: $bp_tabletLandscape) {
+            font-size: 38px;
+        }
+    }
+
     &__title{
-         margin-bottom: 90px;
+         margin-bottom: 50px;
          padding: 0 20px;
 
         h2{
@@ -41,7 +60,7 @@
     }
 
     &.coa-layout .pdf-listing__title {
-        margin-bottom: 115px;
+        
 
         h2 {
             font-size: 30px;

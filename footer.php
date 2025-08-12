@@ -89,7 +89,7 @@
 
 
                             <!-- Google Button -->
-                            <?php echo do_shortcode('[forminator_form id="1206"]'); ?>
+                            <?php echo do_shortcode('[forminator_form id="23481"]'); ?>
 
 
                             <div class="user-login__divider">

@@ -97,14 +97,14 @@
         }
 
         &-col{
-            &:nth-child(2){
+            // &:nth-child(2){
 
-                ul{
-                    column-count: 2;
-                    column-gap: 40px;
-                }
+            //     ul{
+            //         column-count: 2;
+            //         column-gap: 40px;
+            //     }
 
-            }
+            // }
         }
 
         &-inner{
@@ -200,19 +200,19 @@
     }
     
     &__cart{
-        margin-left: 10px;
-        width: 25px;
         position: relative;
         cursor: pointer;
 
         &-wrapper{
             position: relative;
+            display: block;
         }
-        svg{
-            position: relative;
-            top: 13px;
-            width: 100%;
-        }
+
+        // svg{
+        //     position: relative;
+        //     top: 13px;
+        //     width: 100%;
+        // }
 
         .xoo-wsc-sc-subt{
             display: none;
@@ -223,9 +223,8 @@
         }
 
         &-items{
-
             position: absolute;
-            top: calc(50% + 12px);
+            top: calc(50% + 1px);
             left: calc(50% + 3px);
             transform: translate(-50%,-50%);
     
@@ -394,7 +393,6 @@
         position: absolute;
         top: 10px;
         right: 58px;
-        pointer-events: none;
         z-index: 2;
 
         @media (max-width: $bp_tabletLandscape) {
@@ -427,6 +425,7 @@
                     font-weight: 500;
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
 
                     @media (max-width: $bp_desktopLarge) {
                         font-size: 18px;
@@ -538,6 +537,38 @@
 
 .header__mega-menu {
 
+    &[data-id="menu-1"] {
+
+        .header__mega-menu-container {
+            margin: unset;
+            width: 77.51%;
+            padding: 0;
+            margin-left: 21.49%;
+            padding-left: 40px;
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: 24.49%;
+            }
+
+            // @media (max-width: $bp_desktopMedium) {
+            //     margin-left: calc(22.49% + 295px);
+            // }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: 22.49%;
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: 21.49%;
+            }
+        }
+
+        .header__mega-menu-row {
+            justify-content: flex-start;
+            column-gap: 60px;
+        }
+    }
+
     &[data-id="menu-2"] {
         .header__mega-menu-container {
             margin: unset;
@@ -550,20 +581,20 @@
             }
         }
 
-        .header__mega-menu-row {
-            justify-content: flex-start;
-            column-gap: 60px;
-        }
+        // .header__mega-menu-row {
+        //     justify-content: flex-start;
+        //     column-gap: 60px;
+        // }
 
-        .header__mega-menu-col:nth-child(1) {
-            width: 100%;
-            max-width: 323px;
-        }
+        // .header__mega-menu-col:nth-child(1) {
+        //     width: 100%;
+        //     max-width: 323px;
+        // }
 
-        .header__mega-menu-col:nth-child(2) {
-            width: 100%;
-            max-width: 542px;
-        }
+        // .header__mega-menu-col:nth-child(2) {
+        //     width: 100%;
+        //     max-width: 542px;
+        // }
     }
 
     &[data-id="menu-3"] {
@@ -572,10 +603,22 @@
             margin: unset;
             width: 77.51%;
             padding: 0;
-            margin-left: calc(22.49% + 480px);
+            margin-left: calc(22.49% + 415px);
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: calc(22.49% + 353px);
+            }
 
             @media (max-width: $bp_desktopMedium) {
-                margin-left: 47.59%;
+                margin-left: calc(22.49% + 295px);
+            }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: calc(22.49% + 269px);
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: calc(22.49% + 256px);
             }
         }
 
@@ -587,7 +630,23 @@
             margin: unset;
             width: 77.51%;
             padding: 0;
-            margin-left: 63%;
+            margin-left: calc(22.49% + 720px);
+
+            @media (max-width: $bp_desktopLarge) {
+                margin-left: calc(22.49% + 578px);
+            }
+
+            @media (max-width: $bp_desktopMedium) {
+                margin-left: calc(22.49% + 474px);
+            }
+
+            @media (max-width: $bp_desktopSmall) {
+                margin-left: calc(22.49% + 452px);
+            }
+
+            @media (max-width: $bp_mobileMenuShift) {
+                margin-left: calc(22.49% + 440px);
+            }
         }
 
     }

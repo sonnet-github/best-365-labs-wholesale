@@ -1,0 +1,24 @@
+{
+    "name": "acf/text-slider-banner",
+    "title": "Text Slider Banner",
+    "description": "Theme styled Text Slider Banner block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["text-slider-banner", "text", "banner"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-slider-banner.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "text-slider-banner/preview.jpg"
+            }
+        }
+    }
+}

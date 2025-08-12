@@ -16,6 +16,7 @@
     // Get acf fields value and set default
 
     $title = get_field('title');
+    $content = get_field('content');
     $videos = get_field('videos');
 
     // Create class attribute allowing for custom "className" and "align" values.
@@ -35,9 +36,16 @@
 
     <div class="video-list <?= $class_name ?>" <?= $anchor ?>>
         <div class="video-list__container">
-            <?php if($title):?>
-                <h2 class="video-list__title"><?= $title?></h2>
-            <?php endif;?>
+            <div class="video-list__heading">
+                <?php if($title):?>
+                    <h2 class="video-list__title"><?= $title?></h2>
+                <?php endif;?>
+                <?php if($content):?>
+                    <div class="video-list__content">
+                        <?= $content?>
+                    </div>
+                <?php endif;?>
+            </div>
             <?php if($videos):?>
                 <div class="video-list__list">
                     <?php foreach($videos as $item):?>
