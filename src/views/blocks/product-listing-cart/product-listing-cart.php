@@ -17,6 +17,7 @@ if ( ! empty( $block['anchor'] ) ) {
 $section_title = get_field('section_title');
 $content = get_field('content');
 $products = get_field('product_list');
+$layout = get_field('layout') ? get_field('layout') : '4';
 
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'block--custom-layout__product-listing-cart';
@@ -32,7 +33,7 @@ if(get_field('preview_image')) :
 else :
 ?>
 
-<div class="product-listing-cart <?= esc_attr($class_name) ?>" <?= $anchor ?>>
+<div class="product-listing-cart <?= esc_attr($class_name) ?> product-listing-cart--column-layout-<?= $layout ?>" <?= $anchor ?>>
     <div class="product-listing-cart__title">
         <?= $section_title ?>
     </div>
@@ -44,14 +45,11 @@ else :
 
         
             $wc_product       = wc_get_product( $post->ID );
-
-        
             $product_title    = $wc_product->get_name();  
-
             $price = $wc_product->get_price();
-
+            $short_description = $wc_product->get_short_description();
+            $short_description = get_field('product_short_description_home_page', $post->ID);
             $cta = $wc_product->get_permalink();
-            
             $shortname = get_field('short_name', $post->ID);
             $badge = get_field('ribbon_status' , $post->ID);
             $featureImgv2 = get_field('product_featured_image_v2' , $post->ID);
@@ -104,33 +102,61 @@ else :
                             </h5>
                         </div>
                         
-                        <div class="product-listing-cart__desc">
-                           <p>$<?php echo $price; ?></p>
-                        </div>
-
-                        </div>
-
-                        <div class="product-listing-cart__quantity">
-                            <div class="quantity-wrapper">
-                                <button type="button" class="qty-btn minus">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sXlnfCq"><path fill-rule="evenodd" d="M20,12 L20,13 L5,13 L5,12 L20,12 Z"></path></svg>
-                                </button>
-                                <input 
-                                type="number" 
-                                class="qty-input" 
-                                value="1" 
-                                min="1" 
-                                pattern="[0-9]*" 
-                                inputmode="numeric"
-                                />
-                                <button type="button" class="qty-btn plus">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sXlnfCq"><path fill-rule="evenodd" d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z"></path></svg>
-                                </button>
+                            <div class="product-listing-cart__desc">
+                                <p><?= $short_description?></p>
                             </div>
+
+                            <?php if($layout === '4'):?>
+
+                                <?php if(is_user_logged_in()):?>
+                                    <h3 class="product-listing-cart__price">$<?php echo $price; ?></h3>
+                                <?php endif;?>
+
+                            <?php endif;?>
                         </div>
+
+                        <?php if($layout === '2'):?>
+
+                            <?php if(is_user_logged_in()):?>
+                                <h3 class="product-listing-cart__price">$<?php echo $price; ?></h3>
+                            <?php endif;?>
+
+                        <?php endif;?>
+
+                        <?php if(is_user_logged_in()):?>
+                            <div class="product-listing-cart__quantity">
+                                <div class="quantity-wrapper">
+                                    <button type="button" class="qty-btn minus">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sXlnfCq"><path fill-rule="evenodd" d="M20,12 L20,13 L5,13 L5,12 L20,12 Z"></path></svg>
+                                    </button>
+                                    <input 
+                                    type="number" 
+                                    class="qty-input" 
+                                    value="1" 
+                                    min="1" 
+                                    pattern="[0-9]*" 
+                                    inputmode="numeric"
+                                    />
+                                    <button type="button" class="qty-btn plus">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sXlnfCq"><path fill-rule="evenodd" d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="quantity-label">Quantity</div>
+                            </div>
+                        <?php endif;?>
+                        
                         <div class="product-listing-cart__cta">
-                            <a href="#" class="button button--primary quick-view-trigger desktop" data-product-id="<?php echo esc_attr( $post->ID ); ?>">Add to Cart</a>
-                            <a href="<?php echo $cta;?>" class="button button--primary mobile">Add to Cart</a>
+                            <?php if(is_user_logged_in()):?>
+                                <a href="#" class="button button--primary quick-view-trigger desktop" data-product-id="<?php echo esc_attr( $post->ID ); ?>">Add to Cart</a>
+                                <a href="<?php echo $cta;?>" class="button button--primary mobile">Add to Cart</a>
+                            <?php else:
+                                $current_url = home_url( add_query_arg( null, null ) );   
+                                $login_url = wc_get_page_permalink( 'myaccount' );
+                                $redirect_url = add_query_arg( 'redirect_to', urlencode( $current_url ), $login_url ); 
+                            ?>
+                                <a href="<?= $redirect_url?>" class="product-listing-cart__message-btn button button--primary">Login to get your pricing.</a>
+                            <?php endif;?>
+                            <a class="click text-link" href="<?php echo $cta;?>">Learn More</a>
                         </div>
 
                         </div>

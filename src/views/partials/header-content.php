@@ -11,28 +11,36 @@ $icon_check = get_template_directory_uri() . '/assets/images/icon-check.png';
 $icon_bag = get_template_directory_uri() . '/assets/images/icon-bag.png';
 $icon_customer = get_template_directory_uri() . '/assets/images/icon-customer.png';
 $mega_menu_list = get_field('mega_menu_list', 'option');
+$header_cta = get_field('header_cta_link', 'option');
 
 ?>
 <section class="header-sticky">
     <header class="header">
         <div class="header__panel">
             <ul>
+                <?php if($header_cta):?>
+                    <li>
+                        <a href="<?= $header_cta['url']?>" target="<?= $header_cta['target']?>">
+                            <img src="<?= $icon_check?>" alt="Register Icon" width="33" height="33">
+                            <?= $header_cta['title']?>
+                        </a>
+                    </li>
+                <?php endif;?>
                 <li>
-                    <a href="#">
-                        <img src="<?= $icon_check?>" alt="Register Icon" width="33" height="33">
-                        Wholesale Registration
+                    <a class="" href="/my-account/">
+                            <img src="<?= $icon_customer?>" alt="Login" width="32" height="32">
+                            <?php if ( !is_user_logged_in() ) : ?>
+                                Account Log In
+                            <?php else :?>
+                                Account
+                            <?php endif; ?>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="<?= $icon_customer?>" alt="Login" width="32" height="32">
-                        Account Log In
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Shoping Bag" class="bag-btn">
+                <li class="header__cart">
+                    <span class="header__cart-wrapper">
                         <img src="<?= $icon_bag?>" alt="Shoping Bag" width="37" height="47">
-                    </a>
+                        <span class="header__cart-items"><?= do_shortcode('[xoo_wsc_cart]')?></span>
+                    </span>
                 </li>
             </ul>
         </div>

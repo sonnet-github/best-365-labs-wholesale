@@ -32,6 +32,7 @@
 
         &__list {
             display: flex;
+            flex-wrap: wrap;
             margin: 0 -16.5px;
 
             @media (max-width: $bp_desktop) {
@@ -63,11 +64,11 @@
                 }
 
                 &__title {
-                    font-size: 40px;
+                   font-size: 32px;
                     font-weight: 500;
                     line-height: 1;
                     color: inherit;
-                    margin-bottom: 40px;
+                    margin-bottom: 24px;
 
                     @media (max-width: $bp_desktopMedium) {
                        font-size: 27px;
@@ -76,9 +77,8 @@
 
                 &__content {
                     p {
-                        font-size: 30px;
-                        line-height: 40px;
-                        color: inherit;
+                       font-size: 18px;
+                        line-height: 32px;
 
                         @media (max-width: $bp_desktopMedium) {
                             font-size: 20px;

@@ -10,7 +10,7 @@
     if(!isset($_SESSION)){
         session_start();
     }
-    define('DEV_ENV', 1);
+    define('DEV_ENV', 0);
 
     /* Show errors if DEV_ENV is set to 1 */
     if(DEV_ENV === 0){

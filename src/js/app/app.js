@@ -50,6 +50,8 @@ class WebApp {
             $(this).toggleClass('active-item');
         });
 
+        this.customScripts();
+
     }
 
     afterWindowloadHook(){
@@ -117,6 +119,35 @@ class WebApp {
                 scrollTop: $(target).offset().top - 30
             }, 1200);
         }
+    }
+
+    customScripts() {
+
+        if(jQuery('body.single-product').length) {
+
+            // single product page
+            jQuery('.summary .wcsatt-options-prompt-radio .wcsatt-options-prompt-label-subscription').parent('.wcsatt-options-prompt-radio').remove();
+            jQuery('.wcsatt-options-prompt-radios .wcsatt-options-prompt-action-input').prop('checked', false);
+            jQuery('.summary .wcsatt-options-prompt-radio').removeClass('active');
+            jQuery('.custom-single-product__main-right .summary.entry-summary > .price').detach().insertBefore('.summary.entry-summary form .product-listing-cart__quantity');
+
+            jQuery('.wcsatt-options-prompt-action').each(function() { 
+
+                var text = jQuery(this).text(); 
+
+                if(text === 'Purchase one time') {
+                    
+                    const priceText = jQuery('.custom-single-product__summary span.woocommerce-Price-amount.amount').text();
+                    const price = priceText.match(/\$\d+/)[0];
+                    const subscribeInput = jQuery('.custom-single-product__summary input[value="no"] + span');
+
+                    subscribeInput.prepend(`${price} `);
+                }
+
+            });
+
+        }
+
     }
 
 }

@@ -1,0 +1,71 @@
+.mods {
+    padding: 100px 20px;
+    position: relative;
+    background: {
+        image: url('../assets/images/bg-mods.jpg');
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+
+
+    &__container {
+        max-width: 1820px;
+        margin: 0 auto;
+    }
+
+        &__wrapper {
+            padding-right: 20.6%;
+        }
+
+            &__logo {
+                margin-bottom: 40px;
+
+                @media (max-width: $bp_desktopMedium) {
+                    padding-right: 50px;
+                }
+                
+                img {
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+
+            &__title {
+                color: getColor(2);
+                margin-bottom: 60px;
+            }
+
+            &__content {
+
+
+                * {
+                    font-size: 25px;
+                    line-height: 40px;
+                    color: #093141;
+
+                    @media (max-width: $bp_desktopMedium) {
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__image {
+                position: absolute;
+                top: 0;
+                right: 11%;
+
+                @media (max-width: $bp_tabletLandscape) {
+                    max-width: 70px;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+}
