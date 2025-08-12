@@ -1198,3 +1198,11 @@
     }
 
 }
+
+&:not(.is-logged-in) .custom-single-product {
+
+    .summary .cart {
+        display: none !important;
+    }
+    
+}

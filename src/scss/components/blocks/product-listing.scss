@@ -642,7 +642,7 @@
         }
     }
 
-    &__desc{
+    &__desc {
         text-align: center;
         min-height: 130px;
 
@@ -737,6 +737,11 @@
                 font-size: 20px;
             }
         }
+    }
+
+    &__cta a.product-listing-cart__message-btn {
+        padding: 15px 16px !important;
+        height: auto !important;
     }
 
     &--column-layout-2 .product-listing-cart__cta {

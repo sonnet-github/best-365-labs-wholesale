@@ -104,7 +104,7 @@ while (have_posts()) : the_post();
                                 /**
                                  * DO NOT REMOVE — this ensures WooCommerce and Subscriptions plugin work properly.
                                  */
-                                do_action('woocommerce_single_product_summary');
+                                    do_action('woocommerce_single_product_summary');
                                 ?>
                             </div>
                         </div>
