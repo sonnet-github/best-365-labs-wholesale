@@ -108,16 +108,27 @@
                         }
 
                         &__content {
+                            max-width: 75%;
+                            margin: 0 auto;
+                            padding: 0 30px;
+                            text-align: center;
+
+                            @media (max-width: $bp_tabletLandscape ) {
+                               max-width: 90%;
+                            }
 
                             &, * {
                                 color: inherit;
                                 font-size: 25px;
                                 line-height: 30px;
+                                text-align: center;
 
                                 @media (max-width: $bp_tabletLandscape ) {
                                     font-size: 18px;
                                     line-height: 24px;
                                 }
                             }
+
+                            
                         }
 }

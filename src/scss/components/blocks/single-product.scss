@@ -576,6 +576,10 @@
                 padding-left: 5px;
                 margin-bottom: 24px;
 
+                ul, ol {
+                    padding-left: 27px;
+                }
+
                 li{
                     margin-right: 10px;
                     font-size: 22px;
@@ -1078,6 +1082,7 @@
                     line-height: 22px;
                     margin-bottom: 20px;
                 }
+
             }
         }
 
@@ -1201,7 +1206,8 @@
 
 &:not(.is-logged-in) .custom-single-product {
 
-    .summary .cart {
+    .summary .cart,
+    .woocommerce_msrp {
         display: none !important;
     }
     

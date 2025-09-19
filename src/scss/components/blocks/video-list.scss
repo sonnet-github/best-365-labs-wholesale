@@ -48,11 +48,13 @@
         margin-bottom: 55px;
     }
 
-    &__video {
+    &__video,
+    &__embed {
         position: relative;
     }
 
-    &__video video {
+    &__video video,
+    &__embed iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -62,7 +64,8 @@
         background: #000;
     }
 
-    &__video canvas {
+    &__video canvas,
+    &__embed canvas {
         display: block;
         width: 100%;
     }

@@ -51,7 +51,8 @@
             'team-list',
             'video-list',
             'text-slider-banner',
-            'shipping-addresses'
+            'shipping-addresses',
+            'mods'
         ];
 
         foreach($acf_blocks as $block){

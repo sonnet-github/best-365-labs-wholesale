@@ -1,0 +1,24 @@
+{
+    "name": "acf/mods",
+    "title": "Mods",
+    "description": "Theme styled Mods block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["mods", "text", "rich text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "mods.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "mods/preview.jpg"
+            }
+        }
+    }
+}

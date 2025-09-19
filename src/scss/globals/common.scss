@@ -294,6 +294,10 @@ address {
     height: 100%;
 }
 
+em {
+    font-style: italic;
+}
+
 @media (orientation: portrait) {
     .landscape-only{
         display: none !important;
