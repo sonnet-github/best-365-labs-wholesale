@@ -1,0 +1,24 @@
+{
+    "name": "acf/how-to-use",
+    "title": "How To Use",
+    "description": "Theme styled How To Use block.",
+    "category": "custom-layout",
+    "icon": "text",
+    "keywords": ["how-to-use", "product", "how"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "how-to-use.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "how-to-use/preview.jpg"
+            }
+        }
+    }
+}
