@@ -52,7 +52,8 @@
             'video-list',
             'text-slider-banner',
             'shipping-addresses',
-            'mods'
+            'mods',
+            'how-to-use'
         ];
 
         foreach($acf_blocks as $block){
