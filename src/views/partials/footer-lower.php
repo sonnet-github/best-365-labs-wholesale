@@ -50,7 +50,6 @@
         <div class="footer__top">
             <div class="footer__logo">
                 <?php echo $footerLogo; ?>
-                <p>Publicly Trader: NOTR</p>
             </div>
 
             <div class="footer__socials">

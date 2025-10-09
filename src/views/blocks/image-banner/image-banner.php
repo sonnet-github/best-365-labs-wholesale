@@ -19,6 +19,8 @@
     $backgroundMobile = get_field('background_image_mobile');
     $content = get_field('content');
     $contentMobile = get_field('content_mobile');
+    $primary_button = get_field('primary_button');
+    $secondary_button = get_field('secondary_button');
 
     // Create class attribute allowing for custom "className" and "align" values.
     $class_name = 'block--custom-layout__image-banner';
@@ -45,6 +47,16 @@
             <div class="image-banner__content">
                 <?= $content ?>
             </div>
+            <?php if($primary_button || $secondary_button):?>
+                <div class="image-banner__cta-group">
+                    <?php if($primary_button):?>
+                        <a class="button button--primary" href="<?= $primary_button['url'] ?>" target="<?= $primary_button['target'] ?>"><?= $primary_button['title'] ?></a>
+                    <?php endif;?>
+                    <?php if($secondary_button):?>
+                        <a class="button button--primary" href="<?= $secondary_button['url'] ?>" target="<?= $secondary_button['target'] ?>"><?= $secondary_button['title'] ?></a>
+                    <?php endif;?>
+                </div>
+            <?php endif;?>
         </div>
     </div>
 
